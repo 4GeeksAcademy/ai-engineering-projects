@@ -1,0 +1,25 @@
+{
+  "gitpod": true,
+  "title": {
+    "en": "Cinema Seat Manager in TypeScript",
+    "es": "Cinema Seat Manager en TypeScript"
+  },
+  "status": "published",
+  "template_url": "https://github.com/4GeeksAcademy/typescript-cinema-seat-manager",
+  "slug": "typescript-cinema-seat-manager",
+  "description": {
+    "en": "Build a command-line cinema seat reservation system using TypeScript and a two-dimensional array to model an 8x10 screening room. Implement functions to initialize and print the seating map, reserve seats with validation, count occupied vs. available seats, and find two adjacent available seats for couples.",
+    "es": "Construye un sistema de reservas de asientos de cine por línea de comandos usando TypeScript y un arreglo bidimensional para modelar una sala de 8x10. Implementa funciones para inicializar e imprimir el mapa de asientos, reservar asientos con validación, contar asientos ocupados vs. disponibles y encontrar dos asientos contiguos disponibles para parejas."
+  },
+  "difficulty": "beginner",
+  "duration": 1,
+  "technologies": ["typescript", "javascript", "arrays", "algorithms"],
+  "talents": [
+    { "badge": "typescript-developer", "points": 3 },
+    { "badge": "problem-solver", "points": 2 },
+    { "badge": "algorithms-thinker", "points": 2 }
+  ],
+  "translations": ["es", "en"],
+  "projectType": "project",
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id="
+}

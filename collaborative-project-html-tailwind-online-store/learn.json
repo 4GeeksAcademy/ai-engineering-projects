@@ -1,0 +1,36 @@
+{
+  "gitpod": true,
+  "title": {
+    "en": "My first collaborative professional project",
+    "es": "Mi primer proyecto profesional colaborativo"
+  },
+  "status": "published",
+  "template_url": "https://github.com/4GeeksAcademy/html-hello",
+  "slug": "first-collaborative-project-tailwind-css",
+  "description": {
+    "en": "Develop a professional, collaborative e-commerce prototype (at least 5 pages: Home, Catalog, Product, Cart, Checkout) for a client using only HTML and Tailwind CSS. Semantic HTML, responsive design, Schema.org and Git best practices. Work collaboratively using Git branches and pull requests; no React or other frameworks.",
+    "es": "Desarrolla un prototipo profesional y colaborativo de e-commerce (al menos 5 páginas: Home, Catálogo, Producto, Carrito, Checkout) para un cliente usando solo HTML y Tailwind CSS. HTML semántico, diseño responsivo, Schema.org y buenas prácticas de Git. Trabaja en equipo usando ramas y pull requests; sin React ni otros frameworks."
+  },
+  "difficulty": "intermediate",
+  "duration": 2,
+  "technologies": [
+    "html",
+    "css",
+    "accessibility",
+    "tailwind-css",
+    "git",
+    "schema-org"
+  ],
+  "talents": [
+    { "badge": "html-developer", "points": 3 },
+    { "badge": "css-developer", "points": 3 },
+    { "badge": "responsive-designer", "points": 2 },
+    { "badge": "accessibility-expert", "points": 2 },
+    { "badge": "tailwind-css-developer", "points": 2 },
+    { "badge": "ecommerce-prototyper", "points": 2 },
+    { "badge": "collaborative-coder", "points": 2 }
+  ],
+  "translations": ["es", "en"],
+  "projectType": "project",
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id="
+}

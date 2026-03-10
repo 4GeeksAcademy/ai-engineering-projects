@@ -1,0 +1,28 @@
+{
+  "gitpod": true,
+  "title": {
+    "en": "A simple Dashboard with Tailwind CSS",
+    "es": "Un dashboard sencillo en Tailwind CSS"
+  },
+  "status": "published",
+  "template_url": "https://github.com/4GeeksAcademy/html-hello",
+  "slug": "simple-dashboard-tailwind-css",
+  "description": {
+    "en": "Build a responsive dashboard with HTML and Tailwind CSS that shows KPIs, drivers, and operational details so the artist can oversee their ticket business. Semantic HTML, responsive layout; HTML and Tailwind only (no React).",
+    "es": "Crea un dashboard responsivo con HTML y Tailwind CSS que muestre KPIs, drivers y detalles operativos para que el artista supervise su negocio de entradas. HTML semántico, diseño responsivo; solo HTML y Tailwind (sin React)."
+  },
+  "difficulty": "beginner",
+  "duration": 1,
+  "technologies": ["html", "css", "accessibility", "tailwind-css"],
+  "talents": [
+    { "badge": "html-developer", "points": 3 },
+    { "badge": "css-developer", "points": 3 },
+    { "badge": "accessibility-expert", "points": 2 },
+    { "badge": "responsive-designer", "points": 2 },
+    { "badge": "tailwind-css-developer", "points": 2 },
+    { "badge": "dashboard-developer", "points": 1 }
+  ],
+  "translations": ["es", "en"],
+  "projectType": "project",
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id="
+}

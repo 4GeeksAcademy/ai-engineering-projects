@@ -1,0 +1,34 @@
+{
+    "gitpod": true,
+    "title": {
+		"us": "Showcase your friend's artist talent with a website",
+		"es": "Muestra el talento de tu amigo artista con un website"
+	},
+    "status": "published",
+    "template_url" : "https://github.com/4GeeksAcademy/html-hello",
+	"slug": "html-css-artist-landing-seo-access",
+	"description": {
+		"us": "Create an accessible and SEO-optimized landing page for an artist using semantic HTML and CSS.",
+		"es": "Crea una landing page accesible y optimizada para SEO para un artista utilizando HTML semántico y CSS."
+	},
+	"difficulty": "beginner",
+	"duration": 1,
+	"technologies": [
+		"html",
+		"css",
+		"accessibility",
+		"seo"
+	],
+    "talents": [
+		{ "badge": "html-developer", "points": 6 },
+		{ "badge": "css-developer", "points": 3 },
+		{ "badge": "seo-expert", "points": 5 },
+        { "badge": "accessibility-expert", "points": 5 },   
+        { "badge": "responsive-designer", "points": 5 },
+        { "badge": "performance-optimizer", "points": 5 }
+    ],
+	"translations": [ "es","en" ],
+    "projectType": "project",	
+    "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id="
+
+}

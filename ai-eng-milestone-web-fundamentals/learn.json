@@ -1,0 +1,35 @@
+{
+  "gitpod": true,
+  "title": {
+    "en": "Milestone 1 — Your Company's Public Website",
+    "es": "Hito 1 — Sitio Web Público de tu Empresa"
+  },
+  "status": "published",
+  "template_url": "https://github.com/4GeeksAcademy/ai-engineering-company-project-monorepo",
+  "slug": "ai-eng-milestone-web-fundamentals",
+  "description": {
+    "en": "Build your company's first digital touchpoint: a professional public website with a landing page and an application/sign-up form. Use semantic HTML5, Tailwind CSS, Schema.org markup, full form validation with JavaScript, responsive and accessible design. Follow CONTEXT.md for company-specific data and form fields.",
+    "es": "Construye el primer punto de contacto digital de tu empresa: un sitio web público profesional con landing page y formulario de aplicación/registro. Usa HTML5 semántico, Tailwind CSS, marcado Schema.org, validación completa del formulario con JavaScript, diseño responsive y accesible. Sigue el CONTEXT.md para los datos de la empresa y los campos del formulario."
+  },
+  "difficulty": "beginner",
+  "duration": 2,
+  "technologies": [
+    "html",
+    "css",
+    "javascript",
+    "tailwind-css",
+    "accessibility",
+    "schema-org"
+  ],
+  "talents": [
+    { "badge": "html-developer", "points": 3 },
+    { "badge": "css-developer", "points": 3 },
+    { "badge": "responsive-designer", "points": 2 },
+    { "badge": "accessibility-expert", "points": 2 },
+    { "badge": "tailwind-css-developer", "points": 2 },
+    { "badge": "front-end-developer", "points": 2 }
+  ],
+  "translations": ["es", "en"],
+  "projectType": "project",
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id="
+}
