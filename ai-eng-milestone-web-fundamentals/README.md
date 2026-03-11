@@ -179,7 +179,7 @@ Do not clone this repository because we are going to use a different template.
 
 ## 📦 How to Submit
 
-1. Make sure your code is pushed to your fork of the repository
+1. Make sure your code is pushed to your repository
 
 2. Verify that the main files are present:
    - `index.html`
@@ -197,4 +197,4 @@ Do not clone this repository because we are going to use a different template.
 
 ---
 
-This and many other projects are built by students as part of the [Coding Bootcamps](https://4geeksacademy.com/) at 4Geeks Academy. Find out more about our programs: [Full-Stack Software Development with AI](https://4geeksacademy.com/en/career-programs/full-stack), [Data Science & Machine Learning](https://4geeksacademy.com/en/career-programs/data-science-ml), [Cybersecurity](https://4geeksacademy.com/en/career-programs/cybersecurity) and [AI Engineering](https://4geeksacademy.com/en/career-programs/ai-engineering).
+This and many other projects are built by students as part of the [Coding Bootcamps](https://4geeksacademy.com/) at 4Geeks Academy. Find out more about our programs: [AI Engineering](https://4geeksacademy.com/en/career-programs/ai-engineering), [Data Science & Machine Learning](https://4geeksacademy.com/en/career-programs/data-science-ml), [Cybersecurity](https://4geeksacademy.com/en/career-programs/cybersecurity) and [Full-Stack Software Development with AI](https://4geeksacademy.com/en/career-programs/full-stack).

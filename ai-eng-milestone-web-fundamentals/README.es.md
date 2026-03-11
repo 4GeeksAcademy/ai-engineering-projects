@@ -179,7 +179,7 @@ No clones este repositorio porque vamos a usar una plantilla diferente.
 
 ## 📦 Cómo Entregar
 
-1. Asegúrate de que tu código esté pusheado a tu fork del repositorio
+1. Asegúrate de que tu código esté pusheado a repositorio
 
 2. Verifica que los archivos principales estén presentes:
    - `index.html`
@@ -197,4 +197,4 @@ No clones este repositorio porque vamos a usar una plantilla diferente.
 
 ---
 
-Este y muchos otros proyectos son construidos por estudiantes como parte de los [Coding Bootcamps](https://4geeksacademy.com/) de 4Geeks Academy. Encuentra más acerca de nuestros programas: [Desarrollo Full-Stack con IA](https://4geeksacademy.com/es/programas-de-carrera/desarrollo-full-stack), [Ciencia de datos y Machine Learning](https://4geeksacademy.com/es/programas-de-carrera/ciencia-de-datos-ml), [Ciberseguridad](https://4geeksacademy.com/es/programas-de-carrera/ciberseguridad) e [Ingeniería de IA](https://4geeksacademy.com/es/programas-de-carrera/ingenieria-ia).
+Este y muchos otros proyectos son construidos por estudiantes como parte de los [Coding Bootcamps](https://4geeksacademy.com/) de 4Geeks Academy. Encuentra más acerca de nuestros programas: [Ingeniería de IA](https://4geeksacademy.com/es/programas-de-carrera/ingenieria-ia), [Ciencia de datos y Machine Learning](https://4geeksacademy.com/es/programas-de-carrera/ciencia-de-datos-ml), [Ciberseguridad](https://4geeksacademy.com/es/programas-de-carrera/ciberseguridad) e [Desarrollo Full-Stack con IA](https://4geeksacademy.com/es/programas-de-carrera/desarrollo-full-stack).

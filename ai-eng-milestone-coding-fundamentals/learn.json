@@ -1,0 +1,26 @@
+{
+  "gitpod": true,
+  "title": {
+    "en": "Milestone 2 — Coding Fundamentals",
+    "es": "Hito 2 — Fundamentos de Programación"
+  },
+  "status": "published",
+  "template_url": "https://github.com/4GeeksAcademy/ai-engineering-company-project-monorepot",
+  "slug": "ai-eng-milestone-coding-fundamentals",
+  "description": {
+    "en": "Build your company's first internal logic layer in TypeScript: reusable, well-typed utilities to manage, filter, sort, search, validate, and aggregate business data based on your CONTEXT-company.md. Focus on arrays, objects, interfaces, linear and binary search, functional transformations, and business validations that can be reused by future systems.",
+    "es": "Construye la primera capa lógica interna de tu empresa en TypeScript: utilidades reutilizables y bien tipadas para gestionar, filtrar, ordenar, buscar, validar y agregar datos de negocio basados en tu CONTEXT-company.md. Enfócate en arrays, objetos, interfaces, búsqueda lineal y binaria, transformaciones funcionales y validaciones de negocio que otros sistemas puedan reutilizar en el futuro."
+  },
+  "difficulty": "beginner",
+  "duration": 2,
+  "technologies": ["typescript", "algorithms", "clean-code"],
+  "talents": [
+    { "badge": "typescript-developer", "points": 3 },
+    { "badge": "algorithms-developer", "points": 3 },
+    { "badge": "clean-code-advocate", "points": 2 },
+    { "badge": "backend-developer", "points": 2 }
+  ],
+  "translations": ["es", "en"],
+  "projectType": "project",
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id="
+}

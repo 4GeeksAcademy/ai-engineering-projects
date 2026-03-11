@@ -2,7 +2,7 @@
 
 Repository of hands-on projects for the **AI Engineering** program at 4Geeks Academy. Each folder is a standalone project with its own README, evaluation criteria, and (when applicable) `learn.json` for the platform.
 
-Projects follow a pedagogical order: from web fundamentals (HTML, CSS, SEO, accessibility) and Tailwind, through the company site milestone, collaborative work with Git, and logic with TypeScript.
+Projects follow a pedagogical order: from web fundamentals (HTML, CSS, SEO, accessibility) and Tailwind, through the company site and programming milestones, collaborative work with Git, and logic with TypeScript.
 
 ---
 
@@ -22,6 +22,9 @@ Projects follow a pedagogical order: from web fundamentals (HTML, CSS, SEO, acce
 
 5. **[Cinema Seat Manager (TypeScript)](./seats-management-typescript)**  
    Command-line cinema seat reservation system using a 2D array, with reserve, count, and adjacent-seat search functions.
+
+6. **[Programming Fundamentals Milestone (TypeScript)](./ai-eng-milestone-coding-fundamentals)**  
+   Milestone 2 — Programming fundamentals with TypeScript: small, testable modules focusing on control flow, arrays, objects, functions, and edge cases, using clean code practices.
 
 ---
 

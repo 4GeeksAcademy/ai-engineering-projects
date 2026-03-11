@@ -1,0 +1,210 @@
+# Milestone 2 — Programming Fundamentals
+
+<!-- hide -->
+
+By [@marcogonzalo](https://github.com/marcogonzalo) and [other contributors](https://github.com/4GeeksAcademy/ai-engineering-transversal-project/graphs/contributors) at [4Geeks Academy](https://4geeksacademy.com/)
+
+[![build by developers](https://img.shields.io/badge/build_by-Developers-blue)](https://4geeks.com)
+[![4Geeks Academy](https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=x)](https://x.com/4geeksacademy)
+
+_Estas instrucciones están [disponibles en español](./README.es.md)._
+
+**Before you start**: Read your **[CONTEXT-company.md](https://github.com/4GeeksAcademy/ai-engineeirng-milestone-contexts)** before writing any code — it defines the specific company data, field names, data structures, and constraints for your implementation.
+
+<!-- endhide -->
+
+---
+
+## 🎯 The Challenge
+
+You already have your company's public website running with forms and basic validations. Now your tech team needs you to build the first internal functionalities that will make the business operate more efficiently.
+
+Your manager has assigned you to implement a set of data processing utilities that the team needs for day-to-day operations. This is not a complete interface yet — that will come later — but rather the foundational functions that will allow you to manage, filter, sort, and transform critical business information. Think of this as the logic layer that other systems will use down the line.
+
+These utilities must be written in **TypeScript**, be reusable, properly typed, and able to run both in the browser and in development environments. The emphasis is on mastering structured data manipulation: collections, objects, searches, sorting, and transformations.
+
+### 📋 What you're being asked to build
+
+Your tech lead sends you the following brief via email:
+
+> **From:** Tech Lead  
+> **To:** You  
+> **Subject:** Core functionalities for data processing
+>
+> Hi,
+>
+> We need you to implement a set of TypeScript functions that allow us to efficiently handle the company's main data. The goal is to have solid, well-typed utilities that we can reuse in multiple contexts.
+>
+> **What we need:**
+>
+> 1. **Collection management system**: Functions to filter, sort, search, and group elements within arrays. You must implement linear search for unsorted arrays and binary search for sorted arrays. Make sure to properly handle empty cases and elements not found.
+> 2. **Data modeling with objects and interfaces**: Define the TypeScript interfaces that represent the main business entities. Each interface must have explicit types for all its properties and auxiliary methods to work with that data. Use literal objects to represent concrete instances.
+> 3. **Transformations and aggregations**: Implement functions that take collections of objects and generate simple reports: count elements by category, sum numeric values, find maximums and minimums, calculate averages. Everything must be typed.
+> 4. **Business validations**: Create functions that validate that data complies with your company's specific rules before being processed or stored. For example, verify that an element has all required fields, that numeric values are within allowed ranges, or that dates are coherent.
+>
+> The code must be clean, with descriptive names, and each function must have a single responsibility. We want this to be maintainable in the long term.
+>
+> Check your company's context document to know exactly what entities to model, what validations to apply, and what reports to generate.
+>
+> Best regards,  
+> Tech Lead
+
+---
+
+### 💡 What you should know before starting
+
+This milestone focuses exclusively on programming logic and data manipulation with TypeScript. You will not use generative AI or prompting for this challenge — the goal is for you to master programming fundamentals autonomously.
+
+**Key concepts you'll apply:**
+
+- **Arrays and matrices**: How to store, traverse, sort, and search for elements in collections.
+- **Linear search vs binary search**: When to use each one and how to implement them correctly.
+- **Interfaces and literal objects**: How to model real-world data in TypeScript with explicit types.
+- **Pure functions**: Writing functions that only work with what they receive as parameters, without depending on global variables.
+- **Functional transformations**: Using `.map()`, `.filter()`, `.reduce()`, and other array methods to transform data without explicit loops.
+- **Validations**: How to write functions that verify data complies with business rules before processing it.
+
+**Expected file structure:**
+
+Your implementation should be organized in separate TypeScript files by responsibility:
+
+```
+src/
+├── types/
+│   └── models.ts          # Interfaces and types
+├── utils/
+│   ├── collections.ts     # Array functions
+│   ├── search.ts          # Linear and binary searches
+│   ├── transformations.ts # Aggregations and reports
+│   └── validations.ts     # Business validations
+└── index.html             # Test page (optional)
+```
+
+You can include a simple HTML page with Tailwind CSS to manually test your functions if you wish, but the main focus is on the TypeScript logic.
+
+---
+
+## 🌱 How to Start the Project
+
+1. Fork the base repository: [https://github.com/4GeeksAcademy/ai-engineering-company-project-monorepot](https://github.com/4GeeksAcademy/ai-engineering-company-project-monorepot)
+
+2. Clone your fork to your local machine:
+
+   ```bash
+   git clone <your-fork-url>
+   cd transversal-project
+   ```
+
+3. Read your **CONTEXT-company.md** file completely before writing code. There you will find:
+   - The specific entities you must model (products, customers, orders, etc.)
+   - The exact field names and their types
+   - Your company's specific validation rules
+   - The reports you must generate
+
+4. Create a branch for this milestone:
+
+   ```bash
+   git checkout -b milestone-2-programming-fundamentals
+   ```
+
+5. Organize your code in the proposed folder structure and start implementing the functions.
+
+---
+
+## 💻 What You Need to Do
+
+Implement the following functionalities in TypeScript. All entity names, fields, and rules must match exactly what is specified in your CONTEXT.md.
+
+### Backend / Logic
+
+- [ ] Define the **TypeScript interfaces** for all main entities of your company specified in your CONTEXT.md
+- [ ] Implement **filtering** functions that allow searching for elements by one or more criteria (e.g., filter by category, price range, status)
+- [ ] Implement **sorting** functions that sort arrays according to different criteria (ascending, descending, by multiple fields)
+- [ ] Implement **linear search** to find elements in unsorted arrays
+- [ ] Implement **binary search** to find elements in previously sorted arrays
+- [ ] Create **aggregation** functions that generate reports: count elements by category, calculate totals, averages, maximums, and minimums
+- [ ] Implement **business validations** that verify objects comply with the rules in your CONTEXT.md before being processed
+- [ ] All functions must have **explicit types** in parameters and return values
+- [ ] The code must follow the **single responsibility principle**: each function does one thing
+
+⚠️ **IMPORTANT:** Field names, entity types, and validation rules in your implementation must match exactly what is specified in your CONTEXT.md. A generic implementation that ignores the context will not be accepted.
+
+### Frontend / Testing (Optional)
+
+- [ ] Create a simple HTML page with **Tailwind CSS** that allows you to manually test your functions
+- [ ] Include buttons or controls to execute different operations (filter, search, sort, generate reports)
+- [ ] Display operation results in the interface clearly
+
+### Code Quality
+
+- [ ] Use **descriptive names** for variables, functions, and interfaces (camelCase for variables and functions, PascalCase for interfaces)
+- [ ] Each function must be **pure**: works only with what it receives as parameters, without modifying global variables
+- [ ] Write **comments** only when necessary to explain complex logic, not to describe obvious code
+- [ ] Handle **empty cases** correctly: empty arrays, elements not found, null values
+- [ ] Use **const** by default and **let** only when the value will change
+- [ ] Maintain consistent **indentation** and formatting throughout the code
+
+---
+
+## ✅ What We Will Evaluate
+
+### Technical correctness
+
+- [ ] TypeScript interfaces correctly model the entities specified in CONTEXT.md with all their fields and types
+- [ ] Filtering functions correctly return elements that meet the specified criteria
+- [ ] Sorting works correctly in ascending and descending order
+- [ ] Linear search finds elements in unsorted arrays without errors
+- [ ] Binary search works correctly on sorted arrays and returns the correct index or -1 if not found
+- [ ] Aggregations correctly calculate totals, averages, counts, and extreme values
+- [ ] Validations reject data that does not comply with the business rules in CONTEXT.md
+- [ ] There are no TypeScript compilation errors in any file
+
+### Structure and organization
+
+- [ ] Code is organized in separate files by responsibility (types, utils, validations)
+- [ ] Each function has a single clearly identifiable responsibility
+- [ ] Variable, function, and interface names are descriptive and follow TypeScript conventions
+
+### Context adaptation
+
+- [ ] All entity names, fields, and types match exactly those specified in CONTEXT.md
+- [ ] Implemented validations correspond to the business rules defined in CONTEXT.md
+- [ ] Generated reports respond to the specific needs described in CONTEXT.md
+
+### Code quality
+
+- [ ] Functions are pure: they don't depend on external variables or modify global state
+- [ ] Edge cases are handled correctly: empty arrays, elements not found, null values
+- [ ] Code follows TypeScript best practices: explicit types, appropriate use of const/let, avoids any
+
+---
+
+## 📦 How to Submit
+
+1. Make sure all your changes are in the `milestone-2-programming-fundamentals` branch
+
+2. Commit your changes with descriptive messages. Example:
+
+   ```bash
+   git add .
+   git commit -m "Implement interfaces and collection functions for [your company]"
+   ```
+
+3. Push your branch to the remote repository:
+
+   ```bash
+   git push origin milestone-2-programming-fundamentals
+   ```
+
+4. Open a Pull Request from your branch to `main` in your repository
+
+5. In the PR description include:
+   - What functionalities you implemented
+   - What challenges you encountered and how you solved them
+   - Screenshots if you implemented the test interface (optional)
+
+6. Submit the link to your Pull Request on the 4Geeks platform
+
+---
+
+This and many other projects are built by students as part of the [Coding Bootcamps](https://4geeksacademy.com/) at 4Geeks Academy. By [@marcogonzalo](https://github.com/marcogonzalo) and [other contributors](https://github.com/4GeeksAcademy/ai-engineering-transversal-project/graphs/contributors). Find out more about [AI Engineering](https://4geeksacademy.com/en/career-programs/ai-engineering), [Data Science & Machine Learning](https://4geeksacademy.com/en/career-programs/data-science-ml), [Cybersecurity](https://4geeksacademy.com/en/career-programs/cybersecurity) and [Full-Stack Software Developer](https://4geeksacademy.com/en/career-programs/full-stack).
