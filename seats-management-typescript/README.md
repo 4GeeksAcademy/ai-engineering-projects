@@ -9,7 +9,7 @@ By [@marcogonzalo](https://github.com/marcogonzalo) and [@ehiber](https://github
 
 _These instructions are [available in Spanish](./README.es.md)._
 
-**Before you start**: 📗 [Read the instructions](https://4geeks.com/lesson/how-to-start-a-coding-project) on how to start a coding project.
+**Before you start**: 📗 [Read the instructions](https://4geeks.com/lesson/how-to-start-a-project) on how to start a coding project.
 
 <!-- endhide -->
 
@@ -51,7 +51,7 @@ In real reservation systems, this kind of matrix representation is common becaus
 
 5. Start coding! Remember to commit frequently as you complete each feature.
 
-📗 Detailed instructions: [How to start a coding project](https://4geeks.com/lesson/how-to-start-a-coding-project)
+📗 Detailed instructions: [How to start a coding project](https://4geeks.com/lesson/how-to-start-a-project)
 
 ---
 

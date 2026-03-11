@@ -81,7 +81,7 @@ Open the template repository using a provisioning tool such as [Codespaces](http
 https://github.com/4GeeksAcademy/html-hello
 ```
 
-Follow the steps in [how to start a coding project](https://4geeks.com/lesson/how-to-start-a-coding-project).
+Follow the steps in [how to start a coding project](https://4geeks.com/lesson/how-to-start-a-project).
 
 💡 **Important:** Create a new repository on GitHub for your code, update the remote (`git remote set-url origin <your-new-url>`) and push your changes with `add`, `commit` and `push`.
 
