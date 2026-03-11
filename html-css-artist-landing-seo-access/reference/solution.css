@@ -1,0 +1,123 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+/* Skip link for accessibility — visible on focus */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* Header and navigation */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+  z-index: 50;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Full-viewport sections */
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 2rem 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+.section-hero {
+  text-align: center;
+  background: linear-gradient(180deg, #f5f5f5 0%, #fff 100%);
+}
+
+.section-hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: #444;
+  margin: 0;
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.events-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Footer */
+.site-footer {
+  padding: 2rem;
+  text-align: center;
+  background: #f5f5f5;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}

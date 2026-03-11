@@ -13,13 +13,31 @@
   },
   "difficulty": "beginner",
   "duration": 1,
-  "technologies": ["typescript", "javascript", "arrays", "algorithms"],
-  "talents": [
-    { "badge": "typescript-developer", "points": 3 },
-    { "badge": "problem-solver", "points": 2 },
-    { "badge": "algorithms-thinker", "points": 2 }
+  "technologies": [
+    "typescript",
+    "javascript",
+    "arrays",
+    "algorithms"
   ],
-  "translations": ["es", "en"],
+  "talents": [
+    {
+      "badge": "typescript-developer",
+      "points": 3
+    },
+    {
+      "badge": "problem-solver",
+      "points": 2
+    },
+    {
+      "badge": "algorithms-thinker",
+      "points": 2
+    }
+  ],
+  "translations": [
+    "es",
+    "en"
+  ],
   "projectType": "project",
-  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id="
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id=",
+  "solution": "reference/solution.ts"
 }

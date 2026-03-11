@@ -13,16 +13,43 @@
   },
   "difficulty": "beginner",
   "duration": 1,
-  "technologies": ["html", "css", "accessibility", "tailwind-css"],
-  "talents": [
-    { "badge": "html-developer", "points": 3 },
-    { "badge": "css-developer", "points": 3 },
-    { "badge": "accessibility-expert", "points": 2 },
-    { "badge": "responsive-designer", "points": 2 },
-    { "badge": "tailwind-css-developer", "points": 2 },
-    { "badge": "dashboard-developer", "points": 1 }
+  "technologies": [
+    "html",
+    "css",
+    "accessibility",
+    "tailwind-css"
   ],
-  "translations": ["es", "en"],
+  "talents": [
+    {
+      "badge": "html-developer",
+      "points": 3
+    },
+    {
+      "badge": "css-developer",
+      "points": 3
+    },
+    {
+      "badge": "accessibility-expert",
+      "points": 2
+    },
+    {
+      "badge": "responsive-designer",
+      "points": 2
+    },
+    {
+      "badge": "tailwind-css-developer",
+      "points": 2
+    },
+    {
+      "badge": "dashboard-developer",
+      "points": 1
+    }
+  ],
+  "translations": [
+    "es",
+    "en"
+  ],
   "projectType": "project",
-  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id="
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id=",
+  "solution": "reference/solution.html"
 }
