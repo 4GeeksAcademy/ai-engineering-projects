@@ -1,98 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Official landing page for Alex Rivera — musician and performer. Discover the artist, career highlights, and upcoming shows." />
-  <title>Alex Rivera — Artist & Performer</title>
-  <link rel="stylesheet" href="solution.css" />
-  <!-- Schema.org structured data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Official landing page for Alex Rivera — musician and performer. Discover the artist, career highlights, and upcoming shows."
+    />
+    <title>Alex Rivera — Artist & Performer</title>
+    <link rel="stylesheet" href="solution.css" />
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org structured data for SEO -->
+    <script type="application/ld+json">
       {
-        "@type": "Person",
-        "@id": "#artist",
-        "name": "Alex Rivera",
-        "jobTitle": "Musician",
-        "description": "Singer-songwriter and performer. Guitar and vocals.",
-        "url": "https://example.com",
-        "image": "https://example.com/images/alex-rivera.jpg"
-      },
-      {
-        "@type": "CreativeWork",
-        "name": "Echoes",
-        "creator": { "@id": "#artist" },
-        "datePublished": "2024",
-        "description": "Debut album — 12 tracks."
-      },
-      {
-        "@type": "Event",
-        "name": "Summer Night Live",
-        "startDate": "2025-07-15T20:00:00",
-        "location": {
-          "@type": "Place",
-          "name": "Downtown Arena",
-          "address": "123 Main St, City"
-        },
-        "performer": { "@id": "#artist" }
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "#artist",
+            "name": "Alex Rivera",
+            "jobTitle": "Musician",
+            "description": "Singer-songwriter and performer. Guitar and vocals.",
+            "url": "https://example.com",
+            "image": "https://example.com/images/alex-rivera.jpg"
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Echoes",
+            "creator": { "@id": "#artist" },
+            "datePublished": "2024",
+            "description": "Debut album — 12 tracks."
+          },
+          {
+            "@type": "Event",
+            "name": "Summer Night Live",
+            "startDate": "2025-07-15T20:00:00",
+            "location": {
+              "@type": "Place",
+              "name": "Downtown Arena",
+              "address": "123 Main St, City"
+            },
+            "performer": { "@id": "#artist" }
+          }
+        ]
       }
-    ]
-  }
-  </script>
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to main content</a>
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header class="site-header" role="banner">
-    <nav class="main-nav" aria-label="Main navigation">
-      <ul>
-        <li><a href="#welcome">Welcome</a></li>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#career">Career</a></li>
-        <li><a href="#shows">Upcoming shows</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main id="main" role="main">
-    <section id="welcome" class="section section-hero" aria-labelledby="hero-heading">
-      <h1 id="hero-heading">Welcome — Alex Rivera</h1>
-      <p class="hero-tagline">Music that moves you. Live performances you won't forget.</p>
-    </section>
-
-    <section id="about" class="section" aria-labelledby="about-heading">
-      <h2 id="about-heading">About me</h2>
-      <p>I'm a singer-songwriter and performer. I write and play guitar and vocals, blending folk and indie sounds.</p>
-      <img src="images/artist.jpg" alt="Alex Rivera, portrait photo" width="400" height="400" />
-    </section>
-
-    <section id="career" class="section" aria-labelledby="career-heading">
-      <h2 id="career-heading">Career</h2>
-      <p>From small venues to festivals. Albums and collaborations that define my path.</p>
-      <ul>
-        <li>Debut album <strong>Echoes</strong> (2024)</li>
-        <li>Support act for national tours</li>
-        <li>Session work and co-writing</li>
-      </ul>
-    </section>
-
-    <section id="shows" class="section" aria-labelledby="shows-heading">
-      <h2 id="shows-heading">Upcoming shows</h2>
-      <ul class="events-list">
-        <li>
-          <strong>Summer Night Live</strong> — July 15, 2025 — Downtown Arena
-        </li>
-        <li>
-          <strong>Acoustic Sessions</strong> — August 2, 2025 — The Loft
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <p>&copy; Alex Rivera. All rights reserved.</p>
-  </footer>
-</body>
+    <!-- BEGIN: Navigation -->
+    <header class="site-header" data-purpose="main-navigation">
+      <nav aria-label="Main Navigation" class="container">
+        <a aria-label="Alex Rivers Home" class="logo" href="#">AR.</a>
+        <ul class="nav-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#career">Career</a></li>
+          <li><a href="#shows">Upcoming Shows</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- END: Navigation -->
+    <main id="main">
+      <!-- BEGIN: Hero Section -->
+      <section class="hero" data-purpose="hero-banner" id="hero">
+        <!-- Background Visual -->
+        <img
+          alt="Atmospheric abstract art background"
+          class="hero-bg"
+          src="images/artist.jpg"
+        />
+        <div class="hero-content">
+          <span class="hero-subtitle" data-purpose="subtitle">
+            Contemporary Visual Artist
+          </span>
+          <h1>Alex Rivers</h1>
+          <div class="hero-divider"></div>
+          <p class="hero-quote">
+            "Translating the unspoken dialogues of the human experience through
+            light, texture, and silence."
+          </p>
+        </div>
+        <div>
+          <a aria-label="Scroll to About Me" class="explore-btn" href="#about"
+            >Explore</a
+          >
+        </div>
+      </section>
+      <!-- END: Hero Section -->
+      <!-- BEGIN: About Me Section -->
+      <section class="about" data-purpose="biography" id="about">
+        <div class="about-img-container">
+          <img
+            alt="Portrait of Alex Rivers in their studio"
+            class="about-img"
+            src="images/artist.jpg"
+          />
+        </div>
+        <div class="about-content">
+          <h2 class="section-title">The Artist</h2>
+          <div class="text-block">
+            <p>
+              Based in the vibrant heart of the Pacific Northwest, Alex Rivers
+              creates large-scale works that bridge the gap between
+              architectural structure and organic chaos.
+            </p>
+            <p>
+              With over a decade of exploration in mixed media, Alex's process
+              involves a rhythmic cycle of building and stripping away layers,
+              mirroring the natural processes of erosion and rebirth. Each piece
+              is a meditation on the passage of time.
+            </p>
+            <a class="milestone-link" href="#career"
+              >View Career Milestones →</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- END: About Me Section -->
+      <!-- BEGIN: Career Section -->
+      <section class="career" data-purpose="professional-history" id="career">
+        <div class="container">
+          <div class="career-header">
+            <h2 class="section-title">Career</h2>
+            <span class="subtitle-label">Exhibitions &amp; Awards</span>
+          </div>
+          <div class="career-grid">
+            <!-- Milestone Block -->
+            <div class="career-item">
+              <span class="item-meta">2023 — Solo Exhibition</span>
+              <h3 class="item-title">Echoes of the Tundra</h3>
+              <p class="item-desc">
+                Modern Art Institute, Reykjavik. A 12-piece series exploring the
+                vulnerability of arctic landscapes through visceral textures.
+              </p>
+            </div>
+            <div class="career-item">
+              <span class="item-meta">2021 — Global Recognition</span>
+              <h3 class="item-title">Emerging Visionary Award</h3>
+              <p class="item-desc">
+                Recipient of the International Fine Arts Council award for
+                innovation in sustainable medium application.
+              </p>
+            </div>
+            <div class="career-item">
+              <span class="item-meta">2019 — Group Showcase</span>
+              <h3 class="item-title">Urban Flux Collective</h3>
+              <p class="item-desc">
+                Featured artist in the 'Metropolis Reimagined' exhibition at The
+                Sky Gallery, London.
+              </p>
+            </div>
+            <div class="career-item">
+              <span class="item-meta">2017 — Installation</span>
+              <h3 class="item-title">The Breathing Room</h3>
+              <p class="item-desc">
+                A permanent site-specific installation commission for the
+                Seattle Public Library creative wing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Career Section -->
+      <!-- BEGIN: Upcoming Shows Section -->
+      <section class="shows" data-purpose="future-events" id="shows">
+        <div class="container">
+          <h2 class="section-title">Upcoming Shows</h2>
+          <div class="shows-list">
+            <!-- Show Entry -->
+            <article class="show-card" data-purpose="event-card">
+              <div class="text-center md:text-left mb-4 md:mb-0">
+                <time class="show-date" datetime="2024-09-15"
+                  >SEP 15, 2024</time
+                >
+                <h3 class="show-name">Interstellar Silence</h3>
+              </div>
+              <div class="text-center md:text-left">
+                <span class="venue-name">The Horizon Gallery</span>
+                <span class="venue-loc">New York, NY</span>
+              </div>
+              <a class="btn btn-primary" href="#">RSVP Early</a>
+            </article>
+            <article class="show-card" data-purpose="event-card">
+              <div class="text-center md:text-left mb-4 md:mb-0">
+                <time class="show-date" datetime="2024-11-02"
+                  >NOV 02, 2024</time
+                >
+                <h3 class="show-name">Fragmented Memories</h3>
+              </div>
+              <div class="text-center md:text-left">
+                <span class="venue-name">Art Basel Satellite</span>
+                <span class="venue-loc">Miami, FL</span>
+              </div>
+              <a class="btn btn-primary" href="#">Inquire</a>
+            </article>
+            <article class="show-card" data-purpose="event-card">
+              <div class="text-center md:text-left mb-4 md:mb-0">
+                <time class="show-date" datetime="2025-01-20"
+                  >JAN 20, 2025</time
+                >
+                <h3 class="show-name">The Winter Residency</h3>
+              </div>
+              <div class="text-center md:text-left">
+                <span class="venue-name">Alpine Arts Center</span>
+                <span class="venue-loc">Zermatt, Switzerland</span>
+              </div>
+              <button class="btn btn-disabled" disabled="">Sold Out</button>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- END: Upcoming Shows Section -->
+    </main>
+    <!-- BEGIN: Footer -->
+    <footer data-purpose="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>Alex Rivers</h2>
+          <p>
+            For inquiries, collaborations, or private viewing appointments,
+            please reach out via the channels below.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a
+                  class="hover:text-brand-accent transition-colors"
+                  href="mailto:studio@alexriversart.com"
+                  >studio@alexriversart.com</a
+                >
+              </li>
+              <li>+1 (555) 234-7890</li>
+              <li>Studio 42, 12th Avenue<br />Seattle, WA 98122</li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>Connect</h4>
+            <ul>
+              <li>
+                <a class="hover:text-brand-accent transition-colors" href="#"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-brand-accent transition-colors" href="#"
+                  >Vimeo</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-brand-accent transition-colors" href="#"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-brand-accent transition-colors" href="#"
+                  >Artsper</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content">
+        <p>© 2024 Alex Rivers Art. All Rights Reserved.</p>
+        <p>Designed for the Soul.</p>
+      </div>
+    </footer>
+  </body>
 </html>

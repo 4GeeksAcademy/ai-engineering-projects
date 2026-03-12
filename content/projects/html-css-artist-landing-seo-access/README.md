@@ -9,7 +9,7 @@
 
 _Estas instrucciones están [disponibles en español](https://github.com/4GeeksAcademy/html-css-artist-landing-seo-access/blob/main/README.es.md)_
 
-### Before you start...
+### Before you start
 
 > We need you! These exercises are built and maintained in collaboration with contributors such as yourself. If you find any bugs or misspellings please contribute and/or report them.
 
@@ -38,7 +38,7 @@ We recommend opening `the html template repository` using a provisioning tool li
 
 This is the repository you need to open or clone:
 
-```
+```text
 https://github.com/4GeeksAcademy/html-hello
 ```
 
