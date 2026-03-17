@@ -9,7 +9,7 @@ Por [@marcogonzalo](https://github.com/marcogonzalo) y [otros colaboradores](htt
 
 _These instructions are [available in English](./README.md)._
 
-**Antes de comenzar**: Lee tu **[CONTEXT-company.md](https://github.com/4GeeksAcademy/ai-engineering-milestone-contexts)** antes de escribir cualquier código — define los datos específicos de tu empresa, nombres de campos, estructuras de datos y restricciones para tu implementación.
+**Antes de comenzar**: Lee tu **[CONTEXT-company.md](https://github.com/4GeeksAcademy/ai-engineering-syllabus/tree/main/content/contexts)** antes de escribir cualquier código — define los datos específicos de tu empresa, nombres de campos, estructuras de datos y restricciones para tu implementación.
 
 <!-- endhide -->
 

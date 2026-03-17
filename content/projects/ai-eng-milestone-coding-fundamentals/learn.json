@@ -5,7 +5,7 @@
     "es": "Hito 2 — Desarrollando scripts para automatizar tareas"
   },
   "status": "published",
-  "template_url": "https://github.com/4GeeksAcademy/ai-engineering-company-project-monorepot",
+  "template_url": "https://github.com/4GeeksAcademy/ai-engineering-company-project-monorepo",
   "slug": "ai-eng-milestone-coding-fundamentals",
   "description": {
     "en": "Build your company's first internal logic layer in TypeScript: reusable, well-typed utilities to manage, filter, sort, search, validate, and aggregate business data based on your CONTEXT-company.md. Focus on arrays, objects, interfaces, linear and binary search, functional transformations, and business validations that can be reused by future systems.",

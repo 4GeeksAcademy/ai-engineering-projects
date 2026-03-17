@@ -9,7 +9,7 @@ Por [@marcogonzalo](https://github.com/marcogonzalo) y [otros colaboradores](htt
 
 _These instructions are [available in English](./README.md)._
 
-**Antes de comenzar**: Lee tu **[CONTEXT.md](https://github.com/4GeeksAcademy/ai-engineering-milestone-contexts/tree/main/01-web-fundamentals)** antes de escribir cualquier código — define los datos específicos de tu empresa, nombres de campos, valores de dominio y restricciones para tu implementación. También lee las [instrucciones](https://4geeks.com/es/lesson/como-comenzar-un-proyecto-de-programacion) sobre cómo comenzar un proyecto de programación.
+**Antes de comenzar**: Lee tu **[CONTEXT.md](https://github.com/4GeeksAcademy/ai-engineering-syllabus/tree/main/content/contexts/tree/main/01-web-fundamentals)** antes de escribir cualquier código — define los datos específicos de tu empresa, nombres de campos, valores de dominio y restricciones para tu implementación. También lee las [instrucciones](https://4geeks.com/es/lesson/como-comenzar-un-proyecto-de-programacion) sobre cómo comenzar un proyecto de programación.
 
 <!-- endhide -->
 
