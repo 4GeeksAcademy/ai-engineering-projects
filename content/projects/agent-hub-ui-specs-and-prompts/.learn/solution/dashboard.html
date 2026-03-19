@@ -1,0 +1,597 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="./custom-styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#222a3d",
+              tertiary: "#ffb783",
+              "inverse-on-surface": "#283044",
+              "surface-dim": "#0b1326",
+              "primary-fixed": "#e1e0ff",
+              "inverse-surface": "#dae2fd",
+              "on-primary-container": "#0d0096",
+              "primary-container": "#8083ff",
+              error: "#ffb4ab",
+              "surface-container-low": "#131b2e",
+              "on-secondary-container": "#bea8ff",
+              "on-primary-fixed": "#07006c",
+              "on-tertiary-fixed": "#301400",
+              "on-error": "#690005",
+              "on-primary-fixed-variant": "#2f2ebe",
+              outline: "#908fa0",
+              "surface-variant": "#2d3449",
+              "tertiary-fixed-dim": "#ffb783",
+              "on-secondary-fixed": "#21005e",
+              "inverse-primary": "#494bd6",
+              "on-tertiary-fixed-variant": "#703700",
+              "surface-bright": "#31394d",
+              "surface-container": "#171f33",
+              "on-surface": "#dae2fd",
+              surface: "#0b1326",
+              background: "#0b1326",
+              "on-tertiary-container": "#452000",
+              "error-container": "#93000a",
+              "on-secondary-fixed-variant": "#4f319c",
+              "on-background": "#dae2fd",
+              "on-error-container": "#ffdad6",
+              "tertiary-container": "#d97721",
+              "surface-container-lowest": "#060e20",
+              "secondary-container": "#4f319c",
+              "on-secondary": "#381385",
+              secondary: "#cebdff",
+              "secondary-fixed-dim": "#cebdff",
+              "on-primary": "#1000a9",
+              "surface-tint": "#c0c1ff",
+              "secondary-fixed": "#e8ddff",
+              "on-surface-variant": "#c7c4d7",
+              "outline-variant": "#464554",
+              "surface-container-highest": "#2d3449",
+              "on-tertiary": "#4f2500",
+              "tertiary-fixed": "#ffdcc5",
+              "primary-fixed-dim": "#c0c1ff",
+              primary: "#c0c1ff",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom CSS removed: styling is handled via Tailwind classes (CDN). -->
+  </head>
+  <body class="font-body bg-background text-on-surface antialiased">
+    <!-- SideNavBar -->
+    <aside
+      class="h-screen w-64 fixed left-0 top-0 border-r border-indigo-500/10 bg-shell-sidebar dark:bg-slate-900 z-50 overflow-y-auto"
+    >
+      <div class="flex flex-col h-full p-4 gap-2">
+        <!-- Header/Logo Area -->
+        <div class="flex items-center gap-3 px-2 py-4 mb-6">
+          <div
+            class="w-8 h-8 rounded bg-primary-container flex items-center justify-center"
+          >
+            <span
+              class="material-symbols-outlined text-on-primary-container text-sm"
+              data-icon="smart_toy"
+              >smart_toy</span
+            >
+          </div>
+          <div>
+            <h1
+              class="text-xl font-bold tracking-tighter text-shell-primary dark:text-indigo-300 font-headline leading-none"
+            >
+              AgentHub
+            </h1>
+            <p
+              class="text-xxs uppercase tracking-widest text-slate-500 font-bold mt-1"
+            >
+              Command Center
+            </p>
+          </div>
+        </div>
+        <!-- Navigation Links -->
+        <nav class="flex-1 space-y-1">
+          <!-- Dashboard (Active) -->
+          <a
+            class="flex items-center gap-3 px-3 py-2.5 bg-shell-active dark:bg-slate-800 text-shell-primary dark:text-indigo-200 rounded-lg shadow-shell-inset-10 font-manrope text-sm font-medium tracking-tight transition-transform scale-95 active:scale-90"
+            href="./dashboard.html"
+          >
+            <span
+              class="material-symbols-outlined icon-20"
+              data-icon="dashboard"
+              >dashboard</span
+            >
+            Dashboard
+          </a>
+          <a
+            class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg font-manrope text-sm font-medium tracking-tight transition-colors duration-200"
+            href="./user_management.html"
+          >
+            <span class="material-symbols-outlined icon-20" data-icon="group"
+              >group</span
+            >
+            User Management
+          </a>
+          <a
+            class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg font-manrope text-sm font-medium tracking-tight transition-colors duration-200"
+            href="./agent_management.html"
+          >
+            <span
+              class="material-symbols-outlined icon-20"
+              data-icon="smart_toy"
+              >smart_toy</span
+            >
+            Agent Management
+          </a>
+          <a
+            class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg font-manrope text-sm font-medium tracking-tight transition-colors duration-200"
+            href="./skills_catalog.html"
+          >
+            <span
+              class="material-symbols-outlined icon-20"
+              data-icon="psychology"
+              >psychology</span
+            >
+            Skills
+          </a>
+          <a
+            class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg font-manrope text-sm font-medium tracking-tight transition-colors duration-200"
+            href="./agent_contracts.html"
+          >
+            <span
+              class="material-symbols-outlined icon-20"
+              data-icon="description"
+              >description</span
+            >
+            Contracts
+          </a>
+          <a
+            class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg font-manrope text-sm font-medium tracking-tight transition-colors duration-200"
+            href="./error_log.html"
+          >
+            <span class="material-symbols-outlined icon-20" data-icon="terminal"
+              >terminal</span
+            >
+            Error Log
+          </a>
+        </nav>
+        <!-- Bottom Section (User/Settings) -->
+        <div class="mt-auto pt-4 border-t border-indigo-500/10">
+          <div class="flex items-center gap-3 px-2 py-2">
+            <img
+              alt="Admin User"
+              class="w-8 h-8 rounded-full bg-surface-container-high"
+              data-alt="User profile avatar placeholder"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-o9T_V61WfrV7FVsXCtb0KGJvmf7aZeSr46ividLpIUmZYVeAWyjqS7q34ojDHoKIVP8PuTSVuFdF4ZrlpOozpkLpWyKZ1j8CgBA5jjt9i0DXvVO-1mkUgF2f0oRGz4zNsgWw25CVC1j5t1bIH_lT2t51RXlI7ICMO91StzP-yQvPUscDxD43QBMU4hHK18DfNIQmiSTCqb3fHfOFR3mY5faCLnhg-w_dSjaPdzzVbZLjiQ8U3uFjPOf70mEM15zmmtWwryQx"
+            />
+            <div class="overflow-hidden">
+              <p class="text-xs font-semibold text-on-surface truncate">
+                Admin
+              </p>
+              <p class="text-xxs text-on-surface-variant truncate">
+                admin@agenthub.io
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content Wrapper -->
+    <div class="ml-64 min-h-screen flex flex-col">
+      <!-- TopNavBar -->
+      <header
+        class="fixed top-0 right-0 w-main-offset h-16 z-40 bg-topbar-glass dark:bg-slate-950/60 backdrop-blur-md"
+      >
+        <div class="flex items-center justify-between px-8 h-full w-full">
+          <!-- Search on Left -->
+          <div class="flex-1 max-w-md">
+            <div class="relative group">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"
+                data-icon="search"
+                >search</span
+              >
+              <input
+                class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-indigo-500/40 rounded-lg pl-10 pr-4 py-2 text-sm text-on-surface placeholder-slate-500 transition-all"
+                placeholder="Search Command Center..."
+                type="text"
+              />
+            </div>
+          </div>
+          <!-- Trailing Actions -->
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-4">
+              <button
+                class="text-slate-400 hover:text-white transition-opacity"
+              >
+                <span class="material-symbols-outlined" data-icon="dark_mode"
+                  >dark_mode</span
+                >
+              </button>
+              <button
+                class="text-slate-400 hover:text-white transition-opacity relative"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  data-icon="notifications"
+                  >notifications</span
+                >
+                <span
+                  class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full ring-2 ring-surface"
+                ></span>
+              </button>
+              <button
+                class="text-slate-400 hover:text-white transition-opacity"
+              >
+                <span class="material-symbols-outlined" data-icon="settings"
+                  >settings</span
+                >
+              </button>
+            </div>
+            <div class="h-8 w-px bg-indigo-500/10"></div>
+            <img
+              alt="Admin User"
+              class="w-8 h-8 rounded-lg object-cover"
+              data-alt="Admin user profile image small"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK8uOToeggWoRuu5v4tIoWA9TtEz5kXmM9JYy-TYmdPNqW5-C-HYkyyastOmKrYbyoabRa3oML0LgLU7LAXgYPpaG5VSvqSvaGT9LD6vVcBCEbvSjdARsprhZ3LOFrx4BeJJ6IPqTCTnCBqrME1SzUu0ZZPQjpuwmg5qhOOO5lFTBov4Vb11RyOcsf78Thqwzgm-wT9XniExDtTwEomDqG-VLqKKUkTv52mTrfj3XWWWMZZmwbKfqJhHuOvV4SvFRnj8HcxlKz"
+            />
+          </div>
+        </div>
+      </header>
+      <!-- Main Canvas -->
+      <main class="mt-16 p-10 flex-1">
+        <div class="max-w-7xl mx-auto">
+          <!-- Welcome Section -->
+          <div class="mb-10">
+            <h2
+              class="font-headline text-display-md text-hero-xl font-extrabold tracking-tight text-on-surface mb-2"
+            >
+              Welcome back, Admin
+            </h2>
+            <p class="text-on-surface-variant font-medium tracking-tight">
+              System metrics are looking healthy today. Here's your
+              orchestration overview.
+            </p>
+          </div>
+          <!-- Metric Cards Grid (4 Columns) -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10"
+          >
+            <!-- Total Revenue Card -->
+            <div
+              class="bg-surface-container-low p-6 rounded-lg shadow-shell-inset-05 flex flex-col gap-4"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="payments"
+                  >payments</span
+                >
+                <span
+                  class="text-xxs font-bold text-primary px-2 py-0.5 bg-primary/10 rounded-full"
+                  >+12.4%</span
+                >
+              </div>
+              <div>
+                <p
+                  class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider mb-1"
+                >
+                  Total Revenue
+                </p>
+                <h3 class="font-headline text-3xl font-bold text-on-surface">
+                  $124,500
+                </h3>
+              </div>
+            </div>
+            <!-- Discount Losses Card -->
+            <div
+              class="bg-surface-container-low p-6 rounded-lg shadow-shell-inset-05 flex flex-col gap-4"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="material-symbols-outlined text-tertiary"
+                  data-icon="confirmation_number"
+                  >confirmation_number</span
+                >
+                <span
+                  class="text-xxs font-bold text-tertiary px-2 py-0.5 bg-tertiary/10 rounded-full"
+                  >-3.1%</span
+                >
+              </div>
+              <div>
+                <p
+                  class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider mb-1"
+                >
+                  Discount Losses
+                </p>
+                <h3 class="font-headline text-3xl font-bold text-on-surface">
+                  $12,300
+                </h3>
+              </div>
+            </div>
+            <!-- Active Agents Card -->
+            <div
+              class="bg-surface-container-low p-6 rounded-lg shadow-shell-inset-05 flex flex-col gap-4"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="smart_toy"
+                  >smart_toy</span
+                >
+                <div class="flex gap-1">
+                  <div
+                    class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"
+                  ></div>
+                  <span class="text-xxs font-bold text-primary uppercase"
+                    >Live</span
+                  >
+                </div>
+              </div>
+              <div>
+                <p
+                  class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider mb-1"
+                >
+                  Active Agents
+                </p>
+                <h3 class="font-headline text-3xl font-bold text-on-surface">
+                  1,245
+                </h3>
+              </div>
+            </div>
+            <!-- Failing Agents Card (Danger State) -->
+            <div
+              class="bg-error-container/20 p-6 rounded-lg shadow-error-inset-20 flex flex-col gap-4 border border-error/10"
+            >
+              <div class="flex items-center justify-between">
+                <span
+                  class="material-symbols-outlined text-error"
+                  data-icon="warning"
+                  >warning</span
+                >
+                <span
+                  class="text-xxs font-bold text-error px-2 py-0.5 bg-error/20 rounded-full"
+                  >Urgent</span
+                >
+              </div>
+              <div>
+                <p
+                  class="text-error/80 text-xs font-semibold uppercase tracking-wider mb-1"
+                >
+                  Failing Agents
+                </p>
+                <h3 class="font-headline text-3xl font-bold text-error">12</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Activity Chart Placeholder -->
+          <section class="mb-10">
+            <div class="flex items-center justify-between mb-6">
+              <h4
+                class="font-headline text-xl font-bold text-on-surface tracking-tight"
+              >
+                Agent Performance Streams
+              </h4>
+              <div class="flex gap-2">
+                <button
+                  class="px-3 py-1.5 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded hover:text-white transition-colors"
+                >
+                  7 Days
+                </button>
+                <button
+                  class="px-3 py-1.5 bg-primary text-on-primary text-xs font-bold rounded"
+                >
+                  30 Days
+                </button>
+              </div>
+            </div>
+            <!-- Large Dashed Area -->
+            <div
+              class="w-full h-400px bg-surface-container-low rounded-xl border-2 border-dashed border-indigo-500/20 flex flex-col items-center justify-center relative group overflow-hidden"
+            >
+              <!-- Abstract Background Decoration -->
+              <div class="absolute inset-0 opacity-3p pointer-events-none">
+                <div
+                  class="absolute top-0 left-0 w-full h-full bg-radial-agent"
+                ></div>
+              </div>
+              <div class="z-10 flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500"
+                >
+                  <span
+                    class="material-symbols-outlined text-3xl text-primary/40"
+                    data-icon="monitoring"
+                    >monitoring</span
+                  >
+                </div>
+                <h5 class="text-on-surface font-headline font-semibold text-lg">
+                  Weekly Agent Activity Chart (Placeholder)
+                </h5>
+                <p
+                  class="text-on-surface-variant text-sm mt-1 max-w-xs text-center"
+                >
+                  Integrating real-time analytical data streams from
+                  orchestration nodes.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Secondary Data Row (Asymmetric) -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Agent Log Stream (Wide) -->
+            <div
+              class="lg:col-span-2 bg-surface-container-low rounded-xl overflow-hidden flex flex-col shadow-lg shadow-black/20"
+            >
+              <div
+                class="px-6 py-4 border-b border-indigo-500/5 flex items-center justify-between bg-surface-container"
+              >
+                <h4
+                  class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                >
+                  Live Agent Logs
+                </h4>
+                <span
+                  class="material-symbols-outlined text-primary text-sm"
+                  data-icon="terminal"
+                  >terminal</span
+                >
+              </div>
+              <div
+                class="p-6 font-mono text-xs space-y-3 max-h-250 overflow-y-auto custom-scrollbar"
+              >
+                <div class="flex gap-4">
+                  <span class="text-primary/40 whitespace-nowrap"
+                    >[14:20:01]</span
+                  >
+                  <span class="text-on-surface"
+                    >Agent <span class="text-primary">#X-129</span> successfully
+                    deployed to
+                    <span class="text-tertiary">Production-A</span></span
+                  >
+                </div>
+                <div class="flex gap-4">
+                  <span class="text-primary/40 whitespace-nowrap"
+                    >[14:19:58]</span
+                  >
+                  <span class="text-on-surface"
+                    >Skill
+                    <span class="text-secondary">NLP-Parser-v2</span> attached
+                    to Agent <span class="text-primary">#Y-004</span></span
+                  >
+                </div>
+                <div class="flex gap-4">
+                  <span class="text-error/40 whitespace-nowrap"
+                    >[14:18:32]</span
+                  >
+                  <span class="text-error"
+                    >Warning: Latency spike detected in Node-South-4
+                    (450ms)</span
+                  >
+                </div>
+                <div class="flex gap-4">
+                  <span class="text-primary/40 whitespace-nowrap"
+                    >[14:15:22]</span
+                  >
+                  <span class="text-on-surface-variant italic"
+                    >System-wide synchronization complete...</span
+                  >
+                </div>
+                <div class="flex gap-4">
+                  <span class="text-primary/40 whitespace-nowrap"
+                    >[14:12:09]</span
+                  >
+                  <span class="text-on-surface"
+                    >Contract
+                    <span class="text-secondary">SECURE-ETH-04</span> signed by
+                    4/4 validators</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Quick Actions Card (Narrow) -->
+            <div
+              class="bg-surface-container-high rounded-xl p-6 flex flex-col gap-6 shadow-xl shadow-black/30"
+            >
+              <h4
+                class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+              >
+                Immediate Actions
+              </h4>
+              <div class="grid grid-cols-1 gap-3">
+                <button
+                  class="flex items-center justify-between w-full px-4 py-3 bg-surface-container-highest rounded hover:bg-primary/10 transition-colors group"
+                >
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="material-symbols-outlined text-primary"
+                      data-icon="add_circle"
+                      >add_circle</span
+                    >
+                    <span class="text-sm font-semibold text-on-surface"
+                      >Deploy New Agent</span
+                    >
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-xs text-slate-500 group-hover:translate-x-1 transition-transform"
+                    data-icon="arrow_forward"
+                    >arrow_forward</span
+                  >
+                </button>
+                <button
+                  class="flex items-center justify-between w-full px-4 py-3 bg-surface-container-highest rounded hover:bg-primary/10 transition-colors group"
+                >
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="material-symbols-outlined text-primary"
+                      data-icon="refresh"
+                      >refresh</span
+                    >
+                    <span class="text-sm font-semibold text-on-surface"
+                      >Force System Sync</span
+                    >
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-xs text-slate-500 group-hover:translate-x-1 transition-transform"
+                    data-icon="arrow_forward"
+                    >arrow_forward</span
+                  >
+                </button>
+                <button
+                  class="flex items-center justify-between w-full px-4 py-3 bg-error/10 rounded hover:bg-error/20 transition-colors group"
+                >
+                  <div class="flex items-center gap-3">
+                    <span
+                      class="material-symbols-outlined text-error"
+                      data-icon="stop_circle"
+                      >stop_circle</span
+                    >
+                    <span class="text-sm font-semibold text-error"
+                      >Kill Failing Nodes</span
+                    >
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-xs text-error/60 group-hover:translate-x-1 transition-transform"
+                    data-icon="arrow_forward"
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./js/agenthub-ui.js"></script>
+  </body>
+</html>

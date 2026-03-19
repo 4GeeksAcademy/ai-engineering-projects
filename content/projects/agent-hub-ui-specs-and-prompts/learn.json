@@ -1,0 +1,35 @@
+{
+  "gitpod": true,
+  "title": {
+    "en": "AgentHub Admin Panel Specs and Prompt-Driven Prototype",
+    "es": "Especificaciones y prototipo guiado por prompts de AgentHub"
+  },
+  "status": "published",
+  "template_url": "https://github.com/4GeeksAcademy/html-hello",
+  "slug": "agent-hub-ui-specs-and-prompts",
+  "description": {
+    "en": "Create a professional admin panel prototype for AgentHub using Spec-Driven Development. Write a complete SPECS.md first, then implement six dashboard sections with semantic HTML, Tailwind CSS via CDN, and vanilla JavaScript interactions (dropdowns, modals, collapsibles, dark mode).",
+    "es": "Crea un prototipo profesional del panel de administración de AgentHub usando Spec-Driven Development. Escribe primero un SPECS.md completo y luego implementa seis secciones del panel con HTML semántico, Tailwind CSS vía CDN e interacciones en JavaScript vanilla (dropdowns, modales, colapsables y modo oscuro)."
+  },
+  "difficulty": "beginner",
+  "duration": 2,
+  "technologies": [
+    "html",
+    "css",
+    "javascript",
+    "tailwind-css",
+    "accessibility"
+  ],
+  "talents": [
+    { "badge": "html-developer", "points": 3 },
+    { "badge": "css-developer", "points": 3 },
+    { "badge": "javascript-developer", "points": 2 },
+    { "badge": "tailwind-css-developer", "points": 2 },
+    { "badge": "ui-designer", "points": 2 },
+    { "badge": "front-end-developer", "points": 2 }
+  ],
+  "translations": ["es", "en"],
+  "projectType": "project",
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id=",
+  "solution": "https://github.com/4GeeksAcademy/ai-engineering-syllabus/blob/main/content/projects/agent-hub-ui-specs-and-prompts/.learn/solution/README.md"
+}

@@ -1,0 +1,627 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AgentHub | Error Log</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="./custom-styles.css" rel="stylesheet" />
+    <!-- Custom CSS removed: styling is handled via Tailwind classes (CDN). -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6366f1",
+              surface: "#0b1326",
+              "surface-container-low": "#131b2e",
+              "surface-container-high": "#222a3d",
+              "on-surface": "#dae2fd",
+              "on-surface-variant": "#c7c4d7",
+              error: "#ffb4ab",
+              warning: "#ffb783",
+              info: "#c0c1ff",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-primary/30 min-h-screen">
+    <!-- SideNavBar Component -->
+    <aside
+      class="h-screen w-64 fixed left-0 top-0 border-r border-indigo-500/10 bg-shell-sidebar dark:bg-slate-900 flex flex-col p-4 gap-2 z-50"
+    >
+      <div class="flex items-center gap-3 px-2 mb-8">
+        <div
+          class="w-8 h-8 rounded bg-primary flex items-center justify-center"
+        >
+          <span
+            class="material-symbols-outlined text-white text-sm"
+            data-icon="smart_toy"
+            >smart_toy</span
+          >
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="text-xl font-bold tracking-tighter text-shell-primary dark:text-indigo-300 font-manrope"
+            >AgentHub</span
+          >
+          <span
+            class="text-xxs uppercase tracking-widest text-slate-500 font-bold"
+            >Command Center</span
+          >
+        </div>
+      </div>
+      <nav class="flex-1 space-y-1">
+        <a
+          class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 rounded-lg font-manrope text-sm font-medium tracking-tight"
+          href="./dashboard.html"
+        >
+          <span class="material-symbols-outlined text-lg" data-icon="dashboard"
+            >dashboard</span
+          >
+          Dashboard
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 rounded-lg font-manrope text-sm font-medium tracking-tight"
+          href="./user_management.html"
+        >
+          <span class="material-symbols-outlined text-lg" data-icon="group"
+            >group</span
+          >
+          User Management
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 rounded-lg font-manrope text-sm font-medium tracking-tight"
+          href="./agent_management.html"
+        >
+          <span class="material-symbols-outlined text-lg" data-icon="smart_toy"
+            >smart_toy</span
+          >
+          Agent Management
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 rounded-lg font-manrope text-sm font-medium tracking-tight"
+          href="./skills_catalog.html"
+        >
+          <span class="material-symbols-outlined text-lg" data-icon="psychology"
+            >psychology</span
+          >
+          Skills
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 rounded-lg font-manrope text-sm font-medium tracking-tight"
+          href="./agent_contracts.html"
+        >
+          <span
+            class="material-symbols-outlined text-lg"
+            data-icon="description"
+            >description</span
+          >
+          Contracts
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2 bg-shell-active dark:bg-slate-800 text-shell-primary dark:text-indigo-200 rounded-lg shadow-shell-inset-10 font-manrope text-sm font-medium tracking-tight"
+          href="./error_log.html"
+        >
+          <span class="material-symbols-outlined text-lg" data-icon="terminal"
+            >terminal</span
+          >
+          Error Log
+        </a>
+      </nav>
+      <div class="mt-auto pt-4 border-t border-indigo-500/5">
+        <div class="flex items-center gap-3 px-2">
+          <img
+            alt="Admin User"
+            class="w-8 h-8 rounded-full bg-surface-container-high"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmYGQ7MEl5KN5gpZBiZXLwdXRkV3CFvAw5ji8P3lOouyZlSbyRl8XkWbJH10jNwaXss9MS796mkqyg0TXo1xTqe1NoA4D_lp5Rie3vUlYyhX_BjP_f-9zPQ77d5mBi9h60hB_8ozH_QYUwkdSSKnkYgOqO4zIkWpqIcpepQSx9DjBjnGUYcxcxvtnmora-y-UsPj35Xd11yU8kebSlUbmbK4DJmk1Dkj0wXQQHlunS-hVm4Qyq5or3D8hPcnpjKSH_fKoXEHrh"
+          />
+          <div class="flex flex-col overflow-hidden">
+            <span class="text-xs font-semibold text-on-surface truncate"
+              >Admin User</span
+            >
+            <span class="text-xxs text-on-surface-variant truncate"
+              >System Overlord</span
+            >
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="ml-64 min-h-screen">
+      <!-- TopNavBar Component -->
+      <header
+        class="fixed top-0 right-0 w-main-offset h-16 z-40 bg-topbar-glass dark:bg-slate-950/60 backdrop-blur-md flex items-center justify-between px-8 border-b border-white/5"
+      >
+        <div class="flex items-center gap-4 flex-1">
+          <div class="relative w-full max-w-md">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg"
+              data-icon="search"
+              >search</span
+            >
+            <input
+              class="w-full bg-surface-container-low/50 border border-white/5 rounded-lg py-2 pl-10 pr-4 text-sm text-on-surface focus:ring-1 focus:ring-primary/40 focus:border-primary/40 placeholder:text-outline-variant outline-none"
+              placeholder="Search logs, agents, or error types..."
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="text-slate-400 hover:text-white transition-opacity flex items-center"
+          >
+            <span
+              class="material-symbols-outlined text-xl"
+              data-icon="dark_mode"
+              >dark_mode</span
+            >
+          </button>
+          <button
+            class="text-slate-400 hover:text-white transition-opacity flex items-center relative"
+          >
+            <span
+              class="material-symbols-outlined text-xl"
+              data-icon="notifications"
+              >notifications</span
+            >
+            <span
+              class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-surface"
+            ></span>
+          </button>
+          <button
+            class="text-slate-400 hover:text-white transition-opacity flex items-center"
+          >
+            <span class="material-symbols-outlined text-xl" data-icon="settings"
+              >settings</span
+            >
+          </button>
+        </div>
+      </header>
+      <div class="pt-24 px-10 pb-10">
+        <div class="max-w-7xl mx-auto">
+          <!-- Header Section -->
+          <div class="mb-10 flex items-end justify-between">
+            <div>
+              <h1
+                class="text-3xl font-extrabold font-manrope tracking-tight text-on-surface mb-2"
+              >
+                System Diagnostics
+              </h1>
+              <div class="flex items-center gap-3">
+                <span
+                  class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xxs font-bold uppercase tracking-wider"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"
+                  ></span>
+                  Live Monitoring
+                </span>
+                <p class="text-on-surface-variant text-sm font-medium">
+                  Tracking 42 active agents across 3 regions.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <button
+                class="px-4 py-2 bg-surface-container-high hover:bg-surface-bright text-on-surface text-xs font-semibold rounded-lg border border-white/5 transition-colors flex items-center gap-2"
+              >
+                <span
+                  class="material-symbols-outlined text-sm"
+                  data-icon="filter_list"
+                  >filter_list</span
+                >
+                Filter
+              </button>
+              <button
+                class="px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg shadow-lg hover:bg-indigo-500 transition-all flex items-center gap-2"
+              >
+                <span
+                  class="material-symbols-outlined text-sm"
+                  data-icon="download"
+                  >download</span
+                >
+                Export Logs
+              </button>
+            </div>
+          </div>
+          <!-- Log Table -->
+          <div
+            class="bg-surface-container-low rounded-xl border border-white/5 overflow-hidden shadow-2xl"
+          >
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse">
+                <thead
+                  class="bg-surface-container-high/40 border-b border-white/5"
+                >
+                  <tr>
+                    <th
+                      class="px-6 py-4 text-xxs font-bold uppercase tracking-widest text-on-surface-variant"
+                    >
+                      Timestamp
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xxs font-bold uppercase tracking-widest text-on-surface-variant"
+                    >
+                      Agent
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xxs font-bold uppercase tracking-widest text-on-surface-variant"
+                    >
+                      Type
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xxs font-bold uppercase tracking-widest text-on-surface-variant"
+                    >
+                      Description
+                    </th>
+                    <th
+                      class="px-6 py-4 text-xxs font-bold uppercase tracking-widest text-on-surface-variant text-right"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-white/5">
+                  <!-- Log Entry 1 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors group">
+                    <td class="px-6 py-4">
+                      <span class="font-mono text-xs text-on-surface-variant"
+                        >14:20:01</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="text-sm font-bold text-on-surface"
+                        >Nexus-Proxy</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2 py-0.5 bg-error/10 text-error text-xxs font-bold rounded uppercase tracking-wider"
+                        >Critical</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <p
+                        class="text-sm text-on-surface-variant truncate max-w-md"
+                      >
+                        API Connection Timeout: Failed to handshake with
+                        Gateway-04 after 3000ms.
+                      </p>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <div class="relative dropdown-container inline-block">
+                        <button
+                          class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant transition-colors"
+                          onclick="toggleDropdown(this)"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            data-icon="more_vert"
+                            >more_vert</span
+                          >
+                        </button>
+                        <div
+                          class="hidden absolute right-0 mt-2 w-48 bg-surface-container rounded-lg shadow-2xl z-10 border border-white/10 overflow-hidden text-left"
+                        >
+                          <button
+                            class="w-full px-4 py-2 text-xs text-on-surface hover:bg-primary hover:text-white transition-colors flex items-center gap-2"
+                            onclick="
+                              openModal('Nexus-Proxy', 'API_HANDSHAKE_TIMEOUT')
+                            "
+                          >
+                            <span
+                              class="material-symbols-outlined text-sm"
+                              data-icon="visibility"
+                              >visibility</span
+                            >
+                            View detail
+                          </button>
+                          <button
+                            class="w-full px-4 py-2 text-xs text-on-surface hover:bg-primary hover:text-white transition-colors flex items-center gap-2"
+                          >
+                            <span
+                              class="material-symbols-outlined text-sm"
+                              data-icon="check_circle"
+                              >check_circle</span
+                            >
+                            Mark as resolved
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Log Entry 2 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors group">
+                    <td class="px-6 py-4">
+                      <span class="font-mono text-xs text-on-surface-variant"
+                        >14:18:45</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="text-sm font-bold text-on-surface"
+                        >Atlas-Parser</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2 py-0.5 bg-warning/10 text-warning text-xxs font-bold rounded uppercase tracking-wider"
+                        >Warning</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <p
+                        class="text-sm text-on-surface-variant truncate max-w-md"
+                      >
+                        Rate limit nearing threshold (85%). Throttling outbound
+                        requests.
+                      </p>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <div class="relative dropdown-container inline-block">
+                        <button
+                          class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant transition-colors"
+                          onclick="toggleDropdown(this)"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            data-icon="more_vert"
+                            >more_vert</span
+                          >
+                        </button>
+                        <div
+                          class="hidden absolute right-0 mt-2 w-48 bg-surface-container rounded-lg shadow-2xl z-10 border border-white/10 overflow-hidden text-left"
+                        >
+                          <button
+                            class="w-full px-4 py-2 text-xs text-on-surface hover:bg-primary hover:text-white transition-colors flex items-center gap-2"
+                            onclick="
+                              openModal('Atlas-Parser', 'RATE_LIMIT_WARNING')
+                            "
+                          >
+                            <span
+                              class="material-symbols-outlined text-sm"
+                              data-icon="visibility"
+                              >visibility</span
+                            >
+                            View detail
+                          </button>
+                          <button
+                            class="w-full px-4 py-2 text-xs text-on-surface hover:bg-primary hover:text-white transition-colors flex items-center gap-2"
+                          >
+                            <span
+                              class="material-symbols-outlined text-sm"
+                              data-icon="check_circle"
+                              >check_circle</span
+                            >
+                            Mark as resolved
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Log Entry 3 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors group">
+                    <td class="px-6 py-4">
+                      <span class="font-mono text-xs text-on-surface-variant"
+                        >14:15:22</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <span class="text-sm font-bold text-on-surface"
+                        >Core-Orchestrator</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <span
+                        class="px-2 py-0.5 bg-info/10 text-info text-xxs font-bold rounded uppercase tracking-wider"
+                        >Info</span
+                      >
+                    </td>
+                    <td class="px-6 py-4">
+                      <p
+                        class="text-sm text-on-surface-variant truncate max-w-md"
+                      >
+                        Optimization routine 'GC_CLEAN' completed in 450ms.
+                      </p>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <div class="relative dropdown-container inline-block">
+                        <button
+                          class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant transition-colors"
+                          onclick="toggleDropdown(this)"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            data-icon="more_vert"
+                            >more_vert</span
+                          >
+                        </button>
+                        <div
+                          class="hidden absolute right-0 mt-2 w-48 bg-surface-container rounded-lg shadow-2xl z-10 border border-white/10 overflow-hidden text-left"
+                        >
+                          <button
+                            class="w-full px-4 py-2 text-xs text-on-surface hover:bg-primary hover:text-white transition-colors flex items-center gap-2"
+                            onclick="
+                              openModal('Core-Orchestrator', 'SYSTEM_INFO')
+                            "
+                          >
+                            <span
+                              class="material-symbols-outlined text-sm"
+                              data-icon="visibility"
+                              >visibility</span
+                            >
+                            View detail
+                          </button>
+                          <button
+                            class="w-full px-4 py-2 text-xs text-on-surface hover:bg-primary hover:text-white transition-colors flex items-center gap-2"
+                          >
+                            <span
+                              class="material-symbols-outlined text-sm"
+                              data-icon="check_circle"
+                              >check_circle</span
+                            >
+                            Mark as resolved
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Modal: View Detail -->
+    <div
+      class="fixed inset-0 z-modal-100 hidden flex items-center justify-center bg-surface/80 backdrop-blur-md p-4"
+      id="detailModal"
+    >
+      <div
+        class="bg-surface-container-low w-full max-w-3xl rounded-xl shadow-overlay-strong border border-white/10 overflow-hidden scale-100 transition-all"
+      >
+        <div
+          class="p-6 border-b border-white/5 flex items-center justify-between bg-surface-container-high/20"
+        >
+          <div>
+            <h3
+              class="text-xl font-bold font-manrope text-on-surface flex items-center gap-2"
+            >
+              <span
+                class="material-symbols-outlined text-primary"
+                data-icon="terminal"
+                >terminal</span
+              >
+              Trace:
+              <span class="text-primary" id="modalAgentName">Nexus-Proxy</span>
+            </h3>
+            <p class="text-xs text-on-surface-variant mt-1 font-mono">
+              Incident Reference: #AH-552-192 •
+              <span id="modalErrorCode">API_HANDSHAKE_TIMEOUT</span>
+            </p>
+          </div>
+          <button
+            class="text-on-surface-variant hover:text-on-surface p-2 transition-colors"
+            onclick="closeModal()"
+          >
+            <span class="material-symbols-outlined" data-icon="close"
+              >close</span
+            >
+          </button>
+        </div>
+        <div class="p-6">
+          <div
+            class="bg-overlay-solid p-6 rounded-lg border border-white/5 font-mono text-2xs leading-relaxed text-indigo-100/80 overflow-y-auto max-h-500"
+          >
+            <div class="mb-6 pb-6 border-b border-white/5">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-error font-bold flex items-center gap-2">
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="error"
+                    >error</span
+                  >
+                  STACK TRACE
+                </span>
+                <span class="text-on-surface-variant"
+                  >2023-10-24 14:20:01.442Z</span
+                >
+              </div>
+              <code class="block text-error/90 mb-2"
+                >Error: API_HANDSHAKE_TIMEOUT (Code 408)</code
+              >
+              <code class="block text-on-surface-variant"
+                >Trace ID:
+                00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01</code
+              >
+            </div>
+            <div class="space-y-1">
+              <div class="opacity-50">
+                at GatewayConnector.establish
+                (internal/gateway/connector.js:142:21)
+              </div>
+              <div class="opacity-50">
+                at async ProxyHandler.connect (internal/proxy/handler.js:48:12)
+              </div>
+              <div class="opacity-50">
+                at async processTicksAndRejections
+                (node:internal/process/task_queues:95:5)
+              </div>
+              <div class="py-2 text-warning italic font-semibold">
+                --- Handshake Attempt 3 of 3 failed ---
+              </div>
+              <div>
+                Caused by: SocketTimeoutError: Timeout of 3000ms reached
+              </div>
+              <div class="pl-4 opacity-50">
+                at Socket.onTimeout (node:net:502:16)
+              </div>
+              <div class="pl-4 opacity-50">
+                at Socket.emit (node:events:513:28)
+              </div>
+              <div class="pl-4 opacity-50">
+                at Socket._onTimeout (node:net:511:8)
+              </div>
+            </div>
+            <div
+              class="mt-8 p-4 bg-primary/5 rounded border border-primary/10 text-xxs text-primary/80 italic flex items-start gap-3"
+            >
+              <span
+                class="material-symbols-outlined text-sm mt-0.5"
+                data-icon="info"
+                >info</span
+              >
+              <div>
+                System automatically attempted recovery via Node-B. Failover
+                successful. Node-A health check currently: DEGRADED.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-6 bg-surface-container-high/40 border-t border-white/5 flex justify-end gap-3"
+        >
+          <button
+            class="px-5 py-2.5 text-xs font-semibold text-on-surface-variant hover:text-white transition-colors"
+            onclick="closeModal()"
+          >
+            Dismiss
+          </button>
+          <button
+            class="px-5 py-2.5 bg-primary text-white text-xs font-bold rounded-lg shadow-lg hover:bg-indigo-500 transition-all flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-sm" data-icon="download"
+              >download</span
+            >
+            Download Trace
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown + modal logic moved to ./agenthub-ui.js -->
+    <script src="./js/agenthub-ui.js"></script>
+  </body>
+</html>

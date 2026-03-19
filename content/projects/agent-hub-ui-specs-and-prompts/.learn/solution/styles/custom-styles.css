@@ -1,0 +1,119 @@
+.bg-shell-sidebar {
+  background-color: #131b2e;
+}
+.bg-shell-active {
+  background-color: #222a3d;
+}
+.text-shell-primary {
+  color: #c0c1ff;
+}
+.hover-shell-bg:hover {
+  background-color: rgba(34, 42, 61, 0.5);
+}
+.hover-shell-bg-30:hover {
+  background-color: rgba(34, 42, 61, 0.3);
+}
+
+.w-main-offset {
+  width: calc(100% - 16rem);
+}
+.bg-topbar-glass {
+  background-color: rgba(11, 19, 38, 0.6);
+}
+
+.shadow-shell-inset-10 {
+  box-shadow: inset 0 0 0 1px rgba(192, 193, 255, 0.1);
+}
+.shadow-shell-inset-05 {
+  box-shadow: inset 0 0 0 1px rgba(192, 193, 255, 0.05);
+}
+.shadow-shell-inset-05-half {
+  box-shadow: inset 0 0 0 0.5px rgba(192, 193, 255, 0.05);
+}
+.shadow-error-inset-20 {
+  box-shadow: inset 0 0 0 1px rgba(255, 180, 171, 0.2);
+}
+.shadow-primary-soft {
+  box-shadow: 0 0 20px rgba(192, 193, 255, 0.2);
+}
+.shadow-primary-spot {
+  box-shadow: 0 0 20px -5px rgba(128, 131, 255, 0.5);
+}
+.shadow-overlay-strong {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+.shadow-primary-8 {
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+.bg-overlay-80 {
+  background-color: rgba(6, 14, 32, 0.8);
+}
+.bg-overlay-solid {
+  background-color: #060e20;
+}
+.rounded-inherit {
+  border-radius: inherit;
+}
+
+.hover-scale-102:hover {
+  transform: scale(1.02);
+}
+
+.z-modal-60 {
+  z-index: 60;
+}
+.z-modal-100 {
+  z-index: 100;
+}
+
+.max-h-500 {
+  max-height: 500px;
+}
+.max-h-260 {
+  max-height: 260px;
+}
+.max-height-transition {
+  transition-property: max-height;
+}
+
+/* Replacements for Tailwind arbitrary value utilities */
+.text-xxs {
+  font-size: 10px;
+}
+.text-2xs {
+  font-size: 11px;
+}
+.icon-20 {
+  font-size: 20px;
+}
+.tracking-2em {
+  letter-spacing: 0.2em;
+}
+.tracking-3em {
+  letter-spacing: 0.3em;
+}
+.text-hero-xl {
+  font-size: 2.75rem;
+}
+.h-400px {
+  height: 400px;
+}
+.opacity-3p {
+  opacity: 0.03;
+}
+.max-h-250 {
+  max-height: 250px;
+}
+.max-h-60vh {
+  max-height: 60vh;
+}
+.h-1px {
+  height: 1px;
+}
+.hover-scale-098:active {
+  transform: scale(0.98);
+}
+.bg-radial-agent {
+  background: radial-gradient(circle at 50% 50%, #c0c1ff 0%, transparent 70%);
+}

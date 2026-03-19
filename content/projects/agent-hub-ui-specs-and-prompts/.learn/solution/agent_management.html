@@ -1,0 +1,728 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AgentHub - Agent Management</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="./custom-styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#222a3d",
+              tertiary: "#ffb783",
+              "inverse-on-surface": "#283044",
+              "surface-dim": "#0b1326",
+              "primary-fixed": "#e1e0ff",
+              "inverse-surface": "#dae2fd",
+              "on-primary-container": "#0d0096",
+              "primary-container": "#8083ff",
+              error: "#ffb4ab",
+              "surface-container-low": "#131b2e",
+              "on-secondary-container": "#bea8ff",
+              "on-primary-fixed": "#07006c",
+              "on-tertiary-fixed": "#301400",
+              "on-error": "#690005",
+              "on-primary-fixed-variant": "#2f2ebe",
+              outline: "#908fa0",
+              "surface-variant": "#2d3449",
+              "tertiary-fixed-dim": "#ffb783",
+              "on-secondary-fixed": "#21005e",
+              "inverse-primary": "#494bd6",
+              "on-tertiary-fixed-variant": "#703700",
+              "surface-bright": "#31394d",
+              "surface-container": "#171f33",
+              "on-surface": "#dae2fd",
+              surface: "#0b1326",
+              background: "#0b1326",
+              "on-tertiary-container": "#452000",
+              "error-container": "#93000a",
+              "on-secondary-fixed-variant": "#4f319c",
+              "on-background": "#dae2fd",
+              "on-error-container": "#ffdad6",
+              "tertiary-container": "#d97721",
+              "surface-container-lowest": "#060e20",
+              "secondary-container": "#4f319c",
+              "on-secondary": "#381385",
+              secondary: "#cebdff",
+              "secondary-fixed-dim": "#cebdff",
+              "on-primary": "#1000a9",
+              "surface-tint": "#c0c1ff",
+              "secondary-fixed": "#e8ddff",
+              "on-surface-variant": "#c7c4d7",
+              "outline-variant": "#464554",
+              "surface-container-highest": "#2d3449",
+              "on-tertiary": "#4f2500",
+              "tertiary-fixed": "#ffdcc5",
+              "primary-fixed-dim": "#c0c1ff",
+              primary: "#c0c1ff",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom CSS removed: styling is handled via Tailwind classes (CDN). -->
+  </head>
+  <body class="bg-surface font-body text-on-surface min-h-screen">
+    <!-- SideNavBar -->
+    <aside
+      class="h-screen w-64 fixed left-0 top-0 border-r border-indigo-500/10 bg-shell-sidebar dark:bg-slate-900 z-50 flex flex-col p-4 gap-2"
+    >
+      <div class="flex items-center gap-3 mb-8 px-2">
+        <div
+          class="w-10 h-10 bg-primary-container rounded flex items-center justify-center shadow-primary-spot"
+        >
+          <span class="material-symbols-outlined text-on-primary-container"
+            >smart_toy</span
+          >
+        </div>
+        <div>
+          <h1
+            class="font-manrope text-xl font-bold tracking-tighter text-shell-primary dark:text-indigo-300 leading-tight"
+          >
+            AgentHub
+          </h1>
+          <p
+            class="text-xxs uppercase tracking-widest text-slate-500 font-bold"
+          >
+            Command Center
+          </p>
+        </div>
+      </div>
+      <nav class="flex flex-col gap-1">
+        <a
+          class="flex items-center gap-3 p-3 text-slate-400 hover:text-slate-200 hover-shell-bg rounded-lg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight"
+          href="./dashboard.html"
+        >
+          <span class="material-symbols-outlined">dashboard</span>
+          Dashboard
+        </a>
+        <a
+          class="flex items-center gap-3 p-3 text-slate-400 hover:text-slate-200 hover-shell-bg rounded-lg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight"
+          href="./user_management.html"
+        >
+          <span class="material-symbols-outlined">group</span>
+          User Management
+        </a>
+        <a
+          class="flex items-center gap-3 p-3 bg-shell-active dark:bg-slate-800 text-shell-primary dark:text-indigo-200 rounded-lg shadow-shell-inset-10 font-manrope text-sm font-medium tracking-tight"
+          href="./agent_management.html"
+        >
+          <span class="material-symbols-outlined">smart_toy</span>
+          Agent Management
+        </a>
+        <a
+          class="flex items-center gap-3 p-3 text-slate-400 hover:text-slate-200 hover-shell-bg rounded-lg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight"
+          href="./skills_catalog.html"
+        >
+          <span class="material-symbols-outlined">psychology</span>
+          Skills
+        </a>
+        <a
+          class="flex items-center gap-3 p-3 text-slate-400 hover:text-slate-200 hover-shell-bg rounded-lg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight"
+          href="./agent_contracts.html"
+        >
+          <span class="material-symbols-outlined">description</span>
+          Contracts
+        </a>
+        <a
+          class="flex items-center gap-3 p-3 text-slate-400 hover:text-slate-200 hover-shell-bg rounded-lg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight"
+          href="./error_log.html"
+        >
+          <span class="material-symbols-outlined">terminal</span>
+          Error Log
+        </a>
+      </nav>
+      <div
+        class="mt-auto p-4 bg-surface-container-lowest/50 rounded-xl border border-white/5"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center text-xxs font-bold text-primary"
+          >
+            JD
+          </div>
+          <div class="overflow-hidden">
+            <p class="text-xs font-semibold text-on-surface truncate">
+              Admin User
+            </p>
+            <p class="text-xxs text-on-surface-variant truncate">
+              admin@agenthub.ai
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="ml-64 min-h-screen flex flex-col">
+      <!-- TopNavBar -->
+      <header
+        class="h-16 flex items-center justify-between px-8 w-full bg-topbar-glass dark:bg-slate-950/60 backdrop-blur-md z-40 sticky top-0"
+      >
+        <div class="flex items-center flex-1 max-w-xl">
+          <div class="relative w-full group">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm"
+              >search</span
+            >
+            <input
+              class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-indigo-500/40 rounded-lg py-2 pl-10 pr-4 text-sm text-on-surface placeholder:text-outline-variant transition-all"
+              placeholder="Search agents by name, status or owner..."
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="flex items-center gap-4 ml-8">
+          <button
+            class="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-white transition-opacity"
+          >
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-white transition-opacity relative"
+          >
+            <span class="material-symbols-outlined">notifications</span>
+            <span
+              class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"
+            ></span>
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-white transition-opacity"
+          >
+            <span class="material-symbols-outlined">settings</span>
+          </button>
+        </div>
+      </header>
+      <!-- Content Canvas -->
+      <div class="p-10 flex-1">
+        <header class="mb-10 flex justify-between items-end">
+          <div>
+            <h2
+              class="font-manrope text-4xl font-extrabold tracking-tighter text-on-surface mb-2"
+            >
+              Agent Management
+            </h2>
+            <p class="text-on-surface-variant max-w-lg">
+              Orchestrate and monitor your autonomous workforce. Manage
+              deployments, status cycles, and operational parameters.
+            </p>
+          </div>
+          <button
+            class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold flex items-center gap-2 hover:brightness-110 transition-all shadow-lg active:scale-95"
+          >
+            <span class="material-symbols-outlined text-lg">add</span>
+            Deploy New Agent
+          </button>
+        </header>
+        <!-- Agents Bento Grid / List -->
+        <div class="grid grid-cols-1 gap-4">
+          <!-- Agent Entry 1: X-Alpha -->
+          <div
+            class="group surface-container-low agent-card-gradient rounded-xl p-1 border border-transparent hover:border-indigo-500/20 transition-all duration-300"
+          >
+            <div class="p-5 flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center group-hover:bg-primary/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >deployed_code</span
+                  >
+                </div>
+                <div>
+                  <h3 class="font-manrope text-lg font-bold text-on-surface">
+                    X-Alpha
+                  </h3>
+                  <p class="text-xs text-on-surface-variant">
+                    Owner:
+                    <span class="text-on-surface font-medium"
+                      >Enterprise Client A</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-12">
+                <!-- Status -->
+                <div
+                  class="flex items-center gap-2 px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20"
+                >
+                  <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                  <span
+                    class="text-xxs font-bold uppercase tracking-wider text-emerald-400"
+                    >Active</span
+                  >
+                </div>
+                <!-- Skills Toggle -->
+                <button
+                  class="flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors"
+                  onclick="toggleSkills('skills-1', this)"
+                >
+                  <span class="font-semibold">Skills (3)</span>
+                  <span
+                    class="material-symbols-outlined transition-transform duration-300"
+                    >expand_more</span
+                  >
+                </button>
+                <!-- Actions -->
+                <div class="relative">
+                  <button
+                    class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface-variant"
+                    onclick="toggleDropdown('drop-1')"
+                  >
+                    <span class="material-symbols-outlined">more_vert</span>
+                  </button>
+                  <div
+                    class="hidden absolute right-0 mt-2 w-48 glass-panel rounded-lg shadow-xl z-10 p-1 border border-white/5"
+                    id="drop-1"
+                  >
+                    <button
+                      class="w-full text-left px-4 py-2.5 text-sm text-on-surface hover:bg-primary/20 rounded-md flex items-center gap-2"
+                      onclick="
+                        openConfigure(
+                          'X-Alpha',
+                          'You are a highly efficient assistant designed for enterprise resource planning. Focus on data accuracy and real-time synchronization.',
+                        )
+                      "
+                    >
+                      <span class="material-symbols-outlined text-lg"
+                        >settings</span
+                      >
+                      Configure
+                    </button>
+                    <button
+                      class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error/10 rounded-md flex items-center gap-2"
+                    >
+                      <span class="material-symbols-outlined text-lg"
+                        >delete</span
+                      >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Collapsible Skills -->
+            <div
+              class="max-h-0 overflow-hidden max-height-transition duration-300 px-5 pb-5"
+              id="skills-1"
+            >
+              <div
+                class="pt-4 border-t border-indigo-500/10 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >Web Browsing</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >File Read</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >API Execution</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Agent Entry 2: Zeta-9 -->
+          <div
+            class="group surface-container-low agent-card-gradient rounded-xl p-1 border border-transparent hover:border-indigo-500/20 transition-all duration-300"
+          >
+            <div class="p-5 flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center group-hover:bg-primary/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >precision_manufacturing</span
+                  >
+                </div>
+                <div>
+                  <h3 class="font-manrope text-lg font-bold text-on-surface">
+                    Zeta-9
+                  </h3>
+                  <p class="text-xs text-on-surface-variant">
+                    Owner:
+                    <span class="text-on-surface font-medium"
+                      >Internal Core</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-12">
+                <!-- Status -->
+                <div
+                  class="flex items-center gap-2 px-3 py-1 bg-slate-500/10 rounded-full border border-slate-500/20"
+                >
+                  <span class="w-2 h-2 bg-slate-400 rounded-full"></span>
+                  <span
+                    class="text-xxs font-bold uppercase tracking-wider text-slate-400"
+                    >Inactive</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors"
+                  onclick="toggleSkills('skills-2', this)"
+                >
+                  <span class="font-semibold">Skills (2)</span>
+                  <span
+                    class="material-symbols-outlined transition-transform duration-300"
+                    >expand_more</span
+                  >
+                </button>
+                <div class="relative">
+                  <button
+                    class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface-variant"
+                    onclick="toggleDropdown('drop-2')"
+                  >
+                    <span class="material-symbols-outlined">more_vert</span>
+                  </button>
+                  <div
+                    class="hidden absolute right-0 mt-2 w-48 glass-panel rounded-lg shadow-xl z-10 p-1 border border-white/5"
+                    id="drop-2"
+                  >
+                    <button
+                      class="w-full text-left px-4 py-2.5 text-sm text-on-surface hover:bg-primary/20 rounded-md flex items-center gap-2"
+                      onclick="
+                        openConfigure(
+                          'Zeta-9',
+                          'Monitor local server health and perform automated backups every 4 hours. No external communication allowed.',
+                        )
+                      "
+                    >
+                      <span class="material-symbols-outlined text-lg"
+                        >settings</span
+                      >
+                      Configure
+                    </button>
+                    <button
+                      class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error/10 rounded-md flex items-center gap-2"
+                    >
+                      <span class="material-symbols-outlined text-lg"
+                        >delete</span
+                      >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-h-0 overflow-hidden max-height-transition duration-300 px-5 pb-5"
+              id="skills-2"
+            >
+              <div
+                class="pt-4 border-t border-indigo-500/10 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >Local Shell</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >System Metrics</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Agent Entry 3: Nexus-Proxy -->
+          <div
+            class="group surface-container-low agent-card-gradient rounded-xl p-1 border border-transparent hover:border-indigo-500/20 transition-all duration-300"
+          >
+            <div class="p-5 flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center group-hover:bg-primary/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >router</span
+                  >
+                </div>
+                <div>
+                  <h3 class="font-manrope text-lg font-bold text-on-surface">
+                    Nexus-Proxy
+                  </h3>
+                  <p class="text-xs text-on-surface-variant">
+                    Owner:
+                    <span class="text-on-surface font-medium"
+                      >Cloud Gateway Ltd</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-12">
+                <!-- Status -->
+                <div
+                  class="flex items-center gap-2 px-3 py-1 bg-error-container/20 rounded-full border border-error/20"
+                >
+                  <span
+                    class="w-2 h-2 bg-error rounded-full animate-pulse"
+                  ></span>
+                  <span
+                    class="text-xxs font-bold uppercase tracking-wider text-error"
+                    >Failing</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors"
+                  onclick="toggleSkills('skills-3', this)"
+                >
+                  <span class="font-semibold">Skills (1)</span>
+                  <span
+                    class="material-symbols-outlined transition-transform duration-300"
+                    >expand_more</span
+                  >
+                </button>
+                <div class="relative">
+                  <button
+                    class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface-variant"
+                    onclick="toggleDropdown('drop-3')"
+                  >
+                    <span class="material-symbols-outlined">more_vert</span>
+                  </button>
+                  <div
+                    class="hidden absolute right-0 mt-2 w-48 glass-panel rounded-lg shadow-xl z-10 p-1 border border-white/5"
+                    id="drop-3"
+                  >
+                    <button
+                      class="w-full text-left px-4 py-2.5 text-sm text-on-surface hover:bg-primary/20 rounded-md flex items-center gap-2"
+                      onclick="
+                        openConfigure(
+                          'Nexus-Proxy',
+                          'Route all incoming traffic through the secure enclave and strip potentially sensitive headers.',
+                        )
+                      "
+                    >
+                      <span class="material-symbols-outlined text-lg"
+                        >settings</span
+                      >
+                      Configure
+                    </button>
+                    <button
+                      class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error/10 rounded-md flex items-center gap-2"
+                    >
+                      <span class="material-symbols-outlined text-lg"
+                        >delete</span
+                      >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-h-0 overflow-hidden max-height-transition duration-300 px-5 pb-5"
+              id="skills-3"
+            >
+              <div
+                class="pt-4 border-t border-indigo-500/10 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >Network Bridge</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Agent Entry 4: Ghost-Writer -->
+          <div
+            class="group surface-container-low agent-card-gradient rounded-xl p-1 border border-transparent hover:border-indigo-500/20 transition-all duration-300"
+          >
+            <div class="p-5 flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center group-hover:bg-primary/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >edit_note</span
+                  >
+                </div>
+                <div>
+                  <h3 class="font-manrope text-lg font-bold text-on-surface">
+                    Ghost-Writer
+                  </h3>
+                  <p class="text-xs text-on-surface-variant">
+                    Owner:
+                    <span class="text-on-surface font-medium"
+                      >Marketing Pro</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-12">
+                <!-- Status -->
+                <div
+                  class="flex items-center gap-2 px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20"
+                >
+                  <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                  <span
+                    class="text-xxs font-bold uppercase tracking-wider text-emerald-400"
+                    >Active</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors"
+                  onclick="toggleSkills('skills-4', this)"
+                >
+                  <span class="font-semibold">Skills (4)</span>
+                  <span
+                    class="material-symbols-outlined transition-transform duration-300"
+                    >expand_more</span
+                  >
+                </button>
+                <div class="relative">
+                  <button
+                    class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface-variant"
+                    onclick="toggleDropdown('drop-4')"
+                  >
+                    <span class="material-symbols-outlined">more_vert</span>
+                  </button>
+                  <div
+                    class="hidden absolute right-0 mt-2 w-48 glass-panel rounded-lg shadow-xl z-10 p-1 border border-white/5"
+                    id="drop-4"
+                  >
+                    <button
+                      class="w-full text-left px-4 py-2.5 text-sm text-on-surface hover:bg-primary/20 rounded-md flex items-center gap-2"
+                      onclick="
+                        openConfigure(
+                          'Ghost-Writer',
+                          'Draft social media posts based on daily trending topics. Maintain a witty and professional tone.',
+                        )
+                      "
+                    >
+                      <span class="material-symbols-outlined text-lg"
+                        >settings</span
+                      >
+                      Configure
+                    </button>
+                    <button
+                      class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error/10 rounded-md flex items-center gap-2"
+                    >
+                      <span class="material-symbols-outlined text-lg"
+                        >delete</span
+                      >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-h-0 overflow-hidden max-height-transition duration-300 px-5 pb-5"
+              id="skills-4"
+            >
+              <div
+                class="pt-4 border-t border-indigo-500/10 flex flex-wrap gap-2"
+              >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >Social API</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >Content Gen</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >Search</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant text-2xs font-medium rounded border border-white/5"
+                  >Image OCR</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Configure Modal -->
+    <div
+      class="hidden fixed inset-0 z-modal-100 flex items-center justify-center p-6"
+      id="config-modal"
+    >
+      <div
+        class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-sm"
+        onclick="closeModal()"
+      ></div>
+      <div
+        class="relative w-full max-w-2xl bg-surface-container-high rounded-xl shadow-2xl overflow-hidden border border-white/10"
+      >
+        <div
+          class="p-6 border-b border-white/5 flex justify-between items-center"
+        >
+          <div>
+            <h3
+              class="font-manrope text-xl font-bold text-on-surface"
+              id="modal-title"
+            >
+              Configure Agent
+            </h3>
+            <p class="text-xs text-on-surface-variant">
+              Update the system prompt and behavioral constraints.
+            </p>
+          </div>
+          <button
+            class="text-on-surface-variant hover:text-on-surface"
+            onclick="closeModal()"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <div class="p-6">
+          <label
+            class="block text-xs font-bold uppercase tracking-wider text-primary mb-3"
+            >System Prompt</label
+          >
+          <textarea
+            class="w-full h-64 bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary/40 rounded-lg p-4 font-mono text-sm text-on-surface-variant resize-none leading-relaxed"
+            id="modal-prompt"
+          ></textarea>
+        </div>
+        <div class="p-6 bg-surface-container-low flex justify-end gap-3">
+          <button
+            class="px-5 py-2 text-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors"
+            onclick="closeModal()"
+          >
+            Cancel
+          </button>
+          <button
+            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold text-sm hover:brightness-110 transition-all"
+            onclick="closeModal()"
+          >
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdowns/modals/accordion logic moved to ./agenthub-ui.js -->
+    <script src="./js/agenthub-ui.js"></script>
+  </body>
+</html>

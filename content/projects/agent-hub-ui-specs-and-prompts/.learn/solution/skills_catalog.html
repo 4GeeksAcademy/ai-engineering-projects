@@ -1,0 +1,563 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AgentHub | Skills Catalog</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="./custom-styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#222a3d",
+              tertiary: "#ffb783",
+              "inverse-on-surface": "#283044",
+              "surface-dim": "#0b1326",
+              "primary-fixed": "#e1e0ff",
+              "inverse-surface": "#dae2fd",
+              "on-primary-container": "#0d0096",
+              "primary-container": "#8083ff",
+              error: "#ffb4ab",
+              "surface-container-low": "#131b2e",
+              "on-secondary-container": "#bea8ff",
+              "on-primary-fixed": "#07006c",
+              "on-tertiary-fixed": "#301400",
+              "on-error": "#690005",
+              "on-primary-fixed-variant": "#2f2ebe",
+              outline: "#908fa0",
+              "surface-variant": "#2d3449",
+              "tertiary-fixed-dim": "#ffb783",
+              "on-secondary-fixed": "#21005e",
+              "inverse-primary": "#494bd6",
+              "on-tertiary-fixed-variant": "#703700",
+              "surface-bright": "#31394d",
+              "surface-container": "#171f33",
+              "on-surface": "#dae2fd",
+              surface: "#0b1326",
+              background: "#0b1326",
+              "on-tertiary-container": "#452000",
+              "error-container": "#93000a",
+              "on-secondary-fixed-variant": "#4f319c",
+              "on-background": "#dae2fd",
+              "on-error-container": "#ffdad6",
+              "tertiary-container": "#d97721",
+              "surface-container-lowest": "#060e20",
+              "secondary-container": "#4f319c",
+              "on-secondary": "#381385",
+              secondary: "#cebdff",
+              "secondary-fixed-dim": "#cebdff",
+              "on-primary": "#1000a9",
+              "surface-tint": "#c0c1ff",
+              "secondary-fixed": "#e8ddff",
+              "on-surface-variant": "#c7c4d7",
+              "outline-variant": "#464554",
+              "surface-container-highest": "#2d3449",
+              "on-tertiary": "#4f2500",
+              "tertiary-fixed": "#ffdcc5",
+              "primary-fixed-dim": "#c0c1ff",
+              primary: "#c0c1ff",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom CSS removed: styling is handled via Tailwind classes (CDN). -->
+  </head>
+  <body
+    class="bg-background text-on-surface font-body selection:bg-primary/30 antialiased"
+  >
+    <!-- SideNavBar -->
+    <aside
+      class="h-screen w-64 fixed left-0 top-0 border-r border-indigo-500/10 bg-shell-sidebar dark:bg-slate-900 z-50 flex flex-col p-4 gap-2"
+    >
+      <div class="mb-8 px-2 flex items-center gap-3">
+        <div
+          class="w-8 h-8 rounded bg-gradient-to-br from-primary to-primary-container flex items-center justify-center shadow-lg"
+        >
+          <span class="material-symbols-outlined text-on-primary text-xl"
+            >hub</span
+          >
+        </div>
+        <div>
+          <h1
+            class="text-xl font-bold tracking-tighter text-shell-primary dark:text-indigo-300 font-headline"
+          >
+            AgentHub
+          </h1>
+          <p class="text-xxs uppercase tracking-2em text-slate-500 font-bold">
+            Command Center
+          </p>
+        </div>
+      </div>
+      <nav class="flex flex-col gap-1">
+        <a
+          class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight rounded-lg"
+          href="./dashboard.html"
+        >
+          <span class="material-symbols-outlined text-lg">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight rounded-lg"
+          href="./user_management.html"
+        >
+          <span class="material-symbols-outlined text-lg">group</span>
+          <span>User Management</span>
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight rounded-lg"
+          href="./agent_management.html"
+        >
+          <span class="material-symbols-outlined text-lg">smart_toy</span>
+          <span>Agent Management</span>
+        </a>
+        <!-- Active State: Skills -->
+        <a
+          class="flex items-center gap-3 px-3 py-2.5 bg-shell-active dark:bg-slate-800 text-shell-primary dark:text-indigo-200 rounded-lg shadow-shell-inset-10 font-manrope text-sm font-medium tracking-tight"
+          href="./skills_catalog.html"
+        >
+          <span class="material-symbols-outlined text-lg">psychology</span>
+          <span>Skills</span>
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight rounded-lg"
+          href="./agent_contracts.html"
+        >
+          <span class="material-symbols-outlined text-lg">description</span>
+          <span>Contracts</span>
+        </a>
+        <a
+          class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-slate-200 hover-shell-bg transition-colors duration-200 font-manrope text-sm font-medium tracking-tight rounded-lg"
+          href="./error_log.html"
+        >
+          <span class="material-symbols-outlined text-lg">terminal</span>
+          <span>Error Log</span>
+        </a>
+      </nav>
+      <div class="mt-auto pt-4 border-t border-white/5">
+        <div
+          class="flex items-center gap-3 px-2 py-3 bg-surface-container-lowest/50 rounded-lg"
+        >
+          <div
+            class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden"
+          >
+            <img
+              alt="Admin User"
+              data-alt="Avatar of the system administrator user"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuADoGIH1Iltd9uHnUCBWEe3SeS2pDmqKIpqpTXg30HZPxoSsmZvinZiitrTme-atVnkLnRcSIzQOjBUdDc4elwDIXdIGQ6RKP5pFVrTYFD-OLNQZXODG6pe1WXEYQWWaxXwMpOtNZmxtM8I01VRyp4IUTap6PoC7LHqiNDW3WuH-bQo5nNfeQaYtTfuo1NET3S6nVlUGY0nYqM_aavX4qiw8UfOx6HEDQaJ7Z6Cvui9Y59NftwLfBIRGKu2yX45wPHJz8uzDpNd"
+            />
+          </div>
+          <div class="overflow-hidden">
+            <p class="text-xs font-semibold truncate text-on-surface">
+              Admin User
+            </p>
+            <p class="text-xxs text-on-surface-variant truncate">
+              Master Orchestrator
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 right-0 w-main-offset h-16 z-40 bg-topbar-glass dark:bg-slate-950/60 backdrop-blur-md flex items-center justify-between px-8"
+    >
+      <div
+        class="flex items-center gap-4 bg-surface-container-lowest/50 px-4 py-2 rounded-lg group focus-within:ring-1 focus-within:ring-indigo-500/40 transition-all border border-white/5"
+      >
+        <span class="material-symbols-outlined text-slate-500 text-lg"
+          >search</span
+        >
+        <input
+          class="bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder:text-slate-600 w-64"
+          placeholder="Search catalog..."
+          type="text"
+        />
+      </div>
+      <div class="flex items-center gap-4">
+        <button
+          class="w-10 h-10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-surface-container-high transition-all"
+        >
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+        <div class="relative">
+          <button
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-surface-container-high transition-all"
+          >
+            <span class="material-symbols-outlined">notifications</span>
+            <span
+              class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"
+            ></span>
+          </button>
+        </div>
+        <button
+          class="w-10 h-10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-surface-container-high transition-all"
+        >
+          <span class="material-symbols-outlined">settings</span>
+        </button>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="ml-64 pt-24 px-12 pb-12 min-h-screen">
+      <div class="max-w-7xl mx-auto">
+        <!-- Page Header -->
+        <div
+          class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6"
+        >
+          <div>
+            <h2
+              class="text-4xl font-extrabold font-headline tracking-tighter text-on-surface mb-2"
+            >
+              Skills Catalog
+            </h2>
+            <p class="text-on-surface-variant max-w-lg">
+              Manage and deploy functional modules across your agent workforce
+              to expand their operational reach.
+            </p>
+          </div>
+          <button
+            class="flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-lg font-bold shadow-lg hover-scale-102 hover-scale-098 transition-transform"
+          >
+            <span class="material-symbols-outlined">add_circle</span>
+            Create New Skill
+          </button>
+        </div>
+        <!-- Info Box: Asymmetric Editorial Style -->
+        <div class="mb-12 relative overflow-hidden group">
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent pointer-events-none"
+          ></div>
+          <div
+            class="bg-surface-container-low p-8 rounded-xl border-l-4 border-primary inner-glow"
+          >
+            <div class="flex items-start gap-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"
+              >
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >info</span
+                >
+              </div>
+              <div>
+                <h3
+                  class="text-xl font-headline font-bold text-on-surface mb-2"
+                >
+                  What are Skills?
+                </h3>
+                <p class="text-on-surface-variant text-lg leading-relaxed">
+                  Skills are pre-packaged capabilities that define what an agent
+                  can do in the AgentHub ecosystem. They act as modular logic
+                  blocks that agents use to interact with the external world and
+                  internal data streams.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Skill Card 1 -->
+          <div
+            class="bg-surface-container-low group rounded-xl p-6 inner-glow hover:bg-surface-container-high transition-all duration-300 relative flex flex-col"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div
+                class="w-12 h-12 bg-surface-container-lowest rounded-lg flex items-center justify-center inner-glow text-primary"
+              >
+                <span class="material-symbols-outlined text-2xl">public</span>
+              </div>
+              <button
+                class="w-8 h-8 rounded flex items-center justify-center text-slate-500 hover:text-on-surface hover:bg-white/5 transition-colors"
+              >
+                <span class="material-symbols-outlined">more_vert</span>
+              </button>
+            </div>
+            <h4 class="text-lg font-bold font-headline mb-2">Web Browsing</h4>
+            <p class="text-on-surface-variant text-sm line-clamp-2 mb-6">
+              Enables agents to navigate live websites, extract real-time
+              information, and interact with web-based interfaces.
+            </p>
+            <div class="mt-auto flex items-center justify-between">
+              <span
+                class="px-3 py-1 bg-surface-container-highest/50 text-xxs font-bold text-primary tracking-wider uppercase rounded-full"
+                >In use by 25 agents</span
+              >
+              <button
+                class="text-sm font-semibold text-on-surface hover:text-primary transition-colors flex items-center gap-1 group/btn"
+                onclick="toggleModal('skill-detail-modal')"
+              >
+                View detail
+                <span
+                  class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Skill Card 2 -->
+          <div
+            class="bg-surface-container-low group rounded-xl p-6 inner-glow hover:bg-surface-container-high transition-all duration-300 relative flex flex-col"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div
+                class="w-12 h-12 bg-surface-container-lowest rounded-lg flex items-center justify-center inner-glow text-tertiary"
+              >
+                <span class="material-symbols-outlined text-2xl">database</span>
+              </div>
+              <button
+                class="w-8 h-8 rounded flex items-center justify-center text-slate-500 hover:text-on-surface hover:bg-white/5 transition-colors"
+              >
+                <span class="material-symbols-outlined">more_vert</span>
+              </button>
+            </div>
+            <h4 class="text-lg font-bold font-headline mb-2">SQL Executor</h4>
+            <p class="text-on-surface-variant text-sm line-clamp-2 mb-6">
+              Provides controlled access to relational databases for running
+              complex queries and data analysis tasks.
+            </p>
+            <div class="mt-auto flex items-center justify-between">
+              <span
+                class="px-3 py-1 bg-surface-container-highest/50 text-xxs font-bold text-tertiary tracking-wider uppercase rounded-full"
+                >In use by 12 agents</span
+              >
+              <button
+                class="text-sm font-semibold text-on-surface hover:text-tertiary transition-colors flex items-center gap-1 group/btn"
+              >
+                View detail
+                <span
+                  class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Skill Card 3 -->
+          <div
+            class="bg-surface-container-low group rounded-xl p-6 inner-glow hover:bg-surface-container-high transition-all duration-300 relative flex flex-col"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div
+                class="w-12 h-12 bg-surface-container-lowest rounded-lg flex items-center justify-center inner-glow text-secondary"
+              >
+                <span class="material-symbols-outlined text-2xl">mail</span>
+              </div>
+              <button
+                class="w-8 h-8 rounded flex items-center justify-center text-slate-500 hover:text-on-surface hover:bg-white/5 transition-colors"
+              >
+                <span class="material-symbols-outlined">more_vert</span>
+              </button>
+            </div>
+            <h4 class="text-lg font-bold font-headline mb-2">
+              Email Orchestrator
+            </h4>
+            <p class="text-on-surface-variant text-sm line-clamp-2 mb-6">
+              Advanced capability for managing inbox logic, draft generation,
+              and automated follow-up scheduling.
+            </p>
+            <div class="mt-auto flex items-center justify-between">
+              <span
+                class="px-3 py-1 bg-surface-container-highest/50 text-xxs font-bold text-secondary tracking-wider uppercase rounded-full"
+                >In use by 42 agents</span
+              >
+              <button
+                class="text-sm font-semibold text-on-surface hover:text-secondary transition-colors flex items-center gap-1 group/btn"
+              >
+                View detail
+                <span
+                  class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Skill Card 4 -->
+          <div
+            class="bg-surface-container-low group rounded-xl p-6 inner-glow hover:bg-surface-container-high transition-all duration-300 relative flex flex-col"
+          >
+            <div class="flex justify-between items-start mb-4">
+              <div
+                class="w-12 h-12 bg-surface-container-lowest rounded-lg flex items-center justify-center inner-glow text-error"
+              >
+                <span class="material-symbols-outlined text-2xl">shield</span>
+              </div>
+              <button
+                class="w-8 h-8 rounded flex items-center justify-center text-slate-500 hover:text-on-surface hover:bg-white/5 transition-colors"
+              >
+                <span class="material-symbols-outlined">more_vert</span>
+              </button>
+            </div>
+            <h4 class="text-lg font-bold font-headline mb-2">
+              Fraud Detection
+            </h4>
+            <p class="text-on-surface-variant text-sm line-clamp-2 mb-6">
+              Real-time pattern recognition and risk scoring for transactional
+              and behavioral data streams.
+            </p>
+            <div class="mt-auto flex items-center justify-between">
+              <span
+                class="px-3 py-1 bg-surface-container-highest/50 text-xxs font-bold text-error tracking-wider uppercase rounded-full"
+                >In use by 8 agents</span
+              >
+              <button
+                class="text-sm font-semibold text-on-surface hover:text-error transition-colors flex items-center gap-1 group/btn"
+              >
+                View detail
+                <span
+                  class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Modal Detail -->
+    <div
+      class="fixed inset-0 z-modal-100 hidden items-center justify-center px-4"
+      id="skill-detail-modal"
+    >
+      <!-- Backdrop -->
+      <div
+        class="absolute inset-0 bg-background/80 backdrop-blur-sm"
+        onclick="toggleModal('skill-detail-modal')"
+      ></div>
+      <!-- Modal Content -->
+      <div
+        class="relative bg-surface-container-low w-full max-w-2xl rounded-2xl inner-glow shadow-2xl overflow-hidden"
+      >
+        <!-- Header -->
+        <div
+          class="px-8 py-6 border-b border-white/5 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary"
+            >
+              <span class="material-symbols-outlined">public</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold font-headline">Web Browsing</h3>
+              <p
+                class="text-xs text-on-surface-variant tracking-widest uppercase"
+              >
+                Technical Parameters
+              </p>
+            </div>
+          </div>
+          <button
+            class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors text-slate-500"
+            onclick="toggleModal('skill-detail-modal')"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <!-- Body -->
+        <div class="p-8 space-y-8">
+          <div>
+            <h4
+              class="text-sm font-semibold text-on-surface-variant mb-4 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-sm">code</span>
+              Input Configuration (JSON)
+            </h4>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-lg inner-glow font-mono text-sm overflow-x-auto text-on-secondary-container"
+            >
+              <pre><code>{
+  "url": "string",
+  "waitForSelector": "string",
+  "extractData": ["text", "images", "links"],
+  "depth": "number"
+}</code></pre>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <h4
+                class="text-sm font-semibold text-on-surface-variant mb-4 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">output</span>
+                Output Format
+              </h4>
+              <div
+                class="bg-surface-container-lowest p-4 rounded-lg inner-glow"
+              >
+                <span class="text-primary font-bold"
+                  >Text / Structured Markdown</span
+                >
+              </div>
+            </div>
+            <div>
+              <h4
+                class="text-sm font-semibold text-on-surface-variant mb-4 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm">payments</span>
+                Execution Cost
+              </h4>
+              <div
+                class="bg-surface-container-lowest p-4 rounded-lg inner-glow"
+              >
+                <span class="text-tertiary font-bold">$0.05 / execution</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="p-4 bg-tertiary/5 rounded-lg border border-tertiary/20 flex gap-4"
+          >
+            <span class="material-symbols-outlined text-tertiary">warning</span>
+            <p class="text-xs text-tertiary/90 leading-relaxed">
+              Notice: This skill requires elevated agent permissions. Ensure you
+              have mapped the correct proxy credentials before deployment.
+            </p>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div
+          class="px-8 py-6 bg-surface-container-high/50 flex justify-end gap-3"
+        >
+          <button
+            class="px-6 py-2.5 rounded-lg font-semibold text-slate-300 hover:text-white transition-colors"
+            onclick="toggleModal('skill-detail-modal')"
+          >
+            Close
+          </button>
+          <button
+            class="px-6 py-2.5 bg-primary text-on-primary rounded-lg font-bold shadow-lg hover:brightness-110 active:scale-95 transition-all"
+          >
+            Test Skill
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Dropdown + search logic moved to ./agenthub-ui.js -->
+    <script src="./js/agenthub-ui.js"></script>
+  </body>
+</html>
