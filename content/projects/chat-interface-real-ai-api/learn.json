@@ -1,0 +1,34 @@
+{
+  "gitpod": true,
+  "title": {
+    "en": "Talk to the Machine - Building a Chat Interface with a Real AI API",
+    "es": "Habla con la Maquina - Construyendo una Interfaz de Chat con una API de IA Real"
+  },
+  "status": "published",
+  "slug": "chat-interface-real-ai-api",
+  "description": {
+    "en": "Build a proof-of-concept chat interface in vanilla JavaScript that calls the Groq API directly from the browser using fetch, sends full conversation history, and tracks cumulative token usage and response metrics in real time.",
+    "es": "Construye un prototipo de interfaz de chat en JavaScript vanilla que llame la API de Groq directamente desde el navegador usando fetch, envie el historial completo de conversacion y registre en tiempo real el uso acumulado de tokens y metricas de respuesta."
+  },
+  "difficulty": "beginner",
+  "duration": 2,
+  "technologies": [
+    "html",
+    "css",
+    "javascript",
+    "fetch-api",
+    "llm",
+    "prompt-engineering"
+  ],
+  "talents": [
+    { "badge": "html-developer", "points": 3 },
+    { "badge": "css-developer", "points": 2 },
+    { "badge": "javascript-developer", "points": 3 },
+    { "badge": "front-end-developer", "points": 2 },
+    { "badge": "prompt-engineer", "points": 2 }
+  ],
+  "translations": ["es", "en"],
+  "projectType": "project",
+  "batch": "https://breathecode.herokuapp.com/v1/assignment/me/telemetry?asset_id=",
+  "solution": "https://github.com/4GeeksAcademy/ai-engineering-syllabus/blob/main/content/projects/chat-interface-real-ai-api/.learn/solution/README.md"
+}
