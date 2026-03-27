@@ -70,7 +70,7 @@ Organiza el dashboard en grandes bloques:
 
 > Ejemplo visual de dashboard administrativo:
 
-![Ejemplo de dashboard](images/image1.png "Dashboard ejemplo")
+![Dashboard example](.learn/solution.png "Dashboard example")
 
 ---
 
