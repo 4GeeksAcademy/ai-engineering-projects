@@ -69,7 +69,7 @@ Organize the dashboard into broad blocks:
 
 > Example of an administrative dashboard:
 
-![Dashboard example](images/image1.png "Dashboard example")
+![Dashboard example](.learn/solution.png "Dashboard example")
 
 ---
 
